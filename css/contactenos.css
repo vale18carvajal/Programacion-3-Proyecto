@@ -1,0 +1,30 @@
+@import url(shared.css);
+
+:root{
+    /* Paleta de colores */
+--Azul-oscuro-1 : #023059; 
+--Azul-oscuro-2: #0D518C; 
+--Azul: #1C71A6; 
+--celeste: #9AC7D9;
+--texto-color-oscuro:#0D0D0D;
+--texto-color-claro: #F1F1F4;
+
+/*Fuente*/
+--fuente: Tahoma;
+--texto-color: 
+}
+
+.btn-azul{
+    background-color: var(--Azul-oscuro-1);
+    color: var(--texto-color-claro);
+}
+
+.btn-azul:hover{
+    transform: rotate(10deg);
+    -webkit-transform: rotate(10deg);
+    -moz-transform: rotate(10deg);
+    -ms-transform: rotate(10deg);
+    -o-transform: rotate(10deg);
+    background-color: var(--Azul-oscuro-2);
+    color: var(--texto-color-claro)
+}
