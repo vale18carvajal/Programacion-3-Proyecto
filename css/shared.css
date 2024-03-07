@@ -30,7 +30,7 @@
 }
 
 .navbar-toggler{
-    background-color: var(--Azul-oscuro-2);
+    background-color: var(--texto-color-claro);
 }
 
 #logo-nav{
