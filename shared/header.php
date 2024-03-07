@@ -34,7 +34,7 @@
                 <a class="nav-link" href="#">Ubicación</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="#">Contáctenos</a>
+                <a class="nav-link" href="contactenos.php">Contáctenos</a>
               </li>
               <li class="nav-item">
                 <a class="nav-link" href="#">Inicio de Sesión</a>
