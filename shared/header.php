@@ -1,3 +1,7 @@
+<?php
+//Obtener el nombre del archivo que se abre.
+  $url = basename($_SERVER["PHP_SELF"],".php");
+?>
 <!DOCTYPE html>
 <html lang="es">
 <head>
@@ -9,7 +13,7 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" 
     integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
     <!-- Hoja de estilos -->
-    <link rel="stylesheet" href="css/index.css">
+    <link rel="stylesheet" href="css/<?php echo $url?>.css">
 </head>
 <body class="container-fluid">
     <!-- Script Bootstrap -->
@@ -43,71 +47,3 @@
         </div>
       </nav>
     </header>
-    <main>
-      <div class="contenedor-titulo">
-        <!--<video src="https://i.imgur.com/J1hUeTH.mp4" autoplay="true" muted="true" loop="true" poster="https://carontestudio.com/img/contacto.jpg"></video>-->
-      </div>
-
-
-
-
-      Contenido :P
-      <br>
-      <br>
-      <br>
-      <br>
-      <br>
-      
-      <br>
-
-      <br>
-
-      <br>
-
-      <br>
-
-      <br>
-      <br>
-      <br>
-      <br>
-      <br>
-      <br>
-
-      <br>
-
-      <br>
-
-      <br>
-
-      <br>
-
-      <br>
-
-
-
-
-
-
-
-
-    </main>
-    <footer class="row">
-      <div class="col-md-6 col-lg-4 empresa">
-        <img id="logo-f" class="mx-auto d-block" src="img/logo-blanco.png" alt="Logo de la empresa">
-      </div>
-      <div class="col-md-6 col-lg-4 contactos">
-        <h4>Contactos</h4>
-        <img src="img/email.png" alt="íncono de correo"><a href="">vende_tu_inmueble@vtm.com</a> <br>
-        <img src="img/telefono.png" alt="íncono de teléfono"><a href="">506-2222-222</a><br>
-        <img src="img/whatsaap.png" alt="íncono de Whatsapp"><a href="">Whatsapp</a><br>
-      </div>
-      <div class="col-md-6 col-lg-4 social">
-        <h4>Redes Sociales</h4>
-        <a target="_blank" href="https://www.facebook.com/InmueblesEnCostaRica/"><img src="img/facebook.png" alt="Link para cuenta de FACEBOOK"></a>
-        <a target="_blank" href="https://www.instagram.com/inmueblescr?igsh=MXNpYzE5aHNvZGRrZg=="><img src="img/instagram.png" alt="Link para cuenta de INSTAGRAM"></a>
-        <a target="_blank" href="https://www.youtube.com/@omegacostarica"><img src="img/youtube.png" alt="Link para cuenta de YOUTUBE"></a>
-      </div>
-      
-    </footer>
-</body>
-</html>
