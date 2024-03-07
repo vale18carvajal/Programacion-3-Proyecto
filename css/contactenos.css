@@ -28,3 +28,7 @@
     background-color: var(--Azul-oscuro-2);
     color: var(--texto-color-claro)
 }
+
+.container{
+    margin-top: 20px;
+}
