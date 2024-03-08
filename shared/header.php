@@ -16,8 +16,6 @@
     <link rel="stylesheet" href="css/<?php echo $url?>.css">
 </head>
 <body class="container-fluid">
-    <!-- Script Bootstrap -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
     <header class="row">
       <nav class="navbar navbar-expand-lg">
         <div class="container-fluid">
