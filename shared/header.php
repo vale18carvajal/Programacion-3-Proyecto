@@ -39,7 +39,7 @@ $url = basename($_SERVER["PHP_SELF"], ".php");
               <a class="nav-link" href="contactenos.php">Contáctenos</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#">Inicio de Sesión</a>
+              <a class="nav-link" href="inicio-sesion.php">Inicio de Sesión</a>
             </li>
           </ul>
           <div class="d-flex align-items-center icono">
