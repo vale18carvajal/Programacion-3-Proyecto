@@ -16,8 +16,12 @@
 *{
     font-family: var(--fuente);
 }
-h1{
+h1,h2,h3{
     font-family: "Varela Round", sans-serif !important;
+}
+
+h3{
+    font-weight: bold;
 }
 
 
@@ -107,11 +111,12 @@ a{
 }
 
 .btn-azul:hover{
-    transform: rotate(10deg);
+    /*transform: rotate(10deg);
     -webkit-transform: rotate(10deg);
     -moz-transform: rotate(10deg);
     -ms-transform: rotate(10deg);
-    -o-transform: rotate(10deg);
-    background-color: var(--Azul-oscuro-2);
-    color: var(--texto-color-claro)
+    -o-transform: rotate(10deg);*/
+    background-color: var(--texto-color-claro);
+    color: var(--Azul-oscuro-2);
+    border: 2px solid var(--Azul-oscuro-2);
 }

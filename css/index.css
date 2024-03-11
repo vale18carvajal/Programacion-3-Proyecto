@@ -135,38 +135,35 @@ h3{
     -ms-border-radius: 10px;
     -o-border-radius: 10px;
     padding: 15px 10px 0 10px;
-    margin-bottom: 10px;
+    margin-bottom: 20px;
 }
 .comentario img{
     margin: 0 10px;
 }
-.titulo{
-    margin-top: 0;
-    margin-left: 0;
-    margin-right: 0 !important;
-    width: 100% !important;
-    background-image: url("https://mir-s3-cdn-cf.behance.net/project_modules/fs/81935c193440689.65eb8758a02ba.jpg");
-    background-repeat: no-repeat;
-}
-.contenedor-texto{
-    background-color: rgba(0, 0, 0, 0.50);
-    width: 100%;
-    height: 500px;
-    vertical-align: bottom !important;
-    text-align: center;
-    margin: 20px 0;
-}
 
-.contenedor-texto h1{
+.titulo{
+    background-image: linear-gradient(rgba(0, 0, 0, 0.70),rgba(0, 0, 0, 0.50)),
+    url("https://mir-s3-cdn-cf.behance.net/project_modules/fs/81935c193440689.65eb8758a02ba.jpg");
+    /*background-repeat: no-repeat;*/
+    height: 500px;
+}
+.texto-titulo{
+    text-align: center;
+    vertical-align: bottom !important;  
+}
+.texto-titulo h1{
     font-size: 500%;
     color: var(--texto-color-claro);
-    
 }
-.contenedor-texto p{
+.texto-titulo p{
     font-size: 20px;
-    color: var(--texto-color-claro);
-    
+    color: var(--texto-color-claro);  
 }
+.texto-titulo img{
+    width: 25px;
+    height: 25px; 
+}
+
 .separador{
     width: 60%;
     height: 10px;

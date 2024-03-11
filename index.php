@@ -4,15 +4,15 @@
     <!--<video src="https://i.imgur.com/J1hUeTH.mp4" autoplay="true" muted="true" loop="true" poster="https://carontestudio.com/img/contacto.jpg"></video>-->
   </div>
 
-  <div class="Row titulo">
-      <div class="row contenedor-texto fixed-button d-flex align-items-center">
-        <div class="col-md-12 col-lg-12">
-          <h1>Vende tu Inmueble S.A</h1><br>
-          <div class="separador"></div>
-          <br><p>"Descubre el camino hacia tus sueños inmobiliarios"</p>
-        </div>
-        
-      </div>
+  <div class="row titulo d-flex align-items-center">
+      <div class="col-md-12 col-lg-12 texto-titulo ">
+        <h1>Vende tu Inmueble S.A</h1><br>
+        <div class="separador"></div>
+        <br>
+        <p>"Descubre el camino hacia tus sueños inmobiliarios"</p>
+        <br>
+        <img src="img/icono-casa.png">
+      </div> 
   </div>
 
   <div class="row formulario mt-5">
@@ -22,12 +22,12 @@
     </div>
     <div class="row opciones">
       <div class="col-md-6 col-lg-6">
-        <label for="tipo"><strong>Tipo</strong></label>
+        <label for="tipo"><strong>Tipo de inmueble</strong></label>
         <select class="form-select" aria-label="Tipo de propiedad">
           <option selected>Seleccionar</option>
           <option value="casa">Casa</option>
           <option value="apartamento">Apartamento</option>
-          <option value="propiedad">Propiedad</option>
+          <option value="terreno">Terreno</option>
         </select>
       </div>
       <div class="col-md-6 col-lg-6">
@@ -70,7 +70,7 @@
   <div class="row propiedades container justify-content-center mt-5">
     <h3>Nuestras Propiedades</h3>
     <div class="card col-md-4 col-lg-3 col-sm-12" style="width: 18rem;">
-      <img  class="mt-0" src="https://hips.hearstapps.com/hmg-prod/images/casa-reformada-decorada-elegante-colores-neutros-tonos-pastel-salon-cocina-abierta-molduras-1669197336.jpg" class="card-img-top" alt="...">
+      <img class="mt-0" src="https://hips.hearstapps.com/hmg-prod/images/casa-reformada-decorada-elegante-colores-neutros-tonos-pastel-salon-cocina-abierta-molduras-1669197336.jpg" class="card-img-top" alt="...">
       <div class="card-body">
         <h5 class="card-title">Nombre Propiedad</h5>
         <p class="card-text">Aquí va el texto de la dirección exacta de la propiedad.</p>
@@ -78,7 +78,7 @@
       </div>
     </div>
     <div class="card col-md-4 col-lg-3 col-sm-12" style="width: 18rem;">
-      <img  class="mt-0" src="https://hips.hearstapps.com/hmg-prod/images/casa-reformada-decorada-elegante-colores-neutros-tonos-pastel-salon-cocina-abierta-molduras-1669197336.jpg" class="card-img-top" alt="...">
+      <img class="mt-0" src="https://hips.hearstapps.com/hmg-prod/images/casa-reformada-decorada-elegante-colores-neutros-tonos-pastel-salon-cocina-abierta-molduras-1669197336.jpg" class="card-img-top" alt="...">
       <div class="card-body">
         <h5 class="card-title">Nombre Propiedad</h5>
         <p class="card-text">Aquí va el texto de la dirección exacta de la propiedad.</p>
@@ -86,7 +86,7 @@
       </div>
     </div>
     <div class="card col-md-4 col-lg-3 col-sm-12" style="width: 18rem;">
-      <img  class="mt-0" src="https://hips.hearstapps.com/hmg-prod/images/casa-reformada-decorada-elegante-colores-neutros-tonos-pastel-salon-cocina-abierta-molduras-1669197336.jpg" class="card-img-top" alt="...">
+      <img class="mt-0" src="https://hips.hearstapps.com/hmg-prod/images/casa-reformada-decorada-elegante-colores-neutros-tonos-pastel-salon-cocina-abierta-molduras-1669197336.jpg" class="card-img-top" alt="...">
       <div class="card-body">
         <h5 class="card-title">Nombre Propiedad</h5>
         <p class="card-text">Aquí va el texto de la dirección exacta de la propiedad.</p>
@@ -94,7 +94,7 @@
       </div>
     </div>
     <div class="card col-md-4 col-lg-3 col-sm-12" style="width: 18rem;">
-      <img  class="mt-0" src="https://hips.hearstapps.com/hmg-prod/images/casa-reformada-decorada-elegante-colores-neutros-tonos-pastel-salon-cocina-abierta-molduras-1669197336.jpg" class="card-img-top" alt="...">
+      <img class="mt-0" src="https://hips.hearstapps.com/hmg-prod/images/casa-reformada-decorada-elegante-colores-neutros-tonos-pastel-salon-cocina-abierta-molduras-1669197336.jpg" class="card-img-top" alt="...">
       <div class="card-body">
         <h5 class="card-title">Nombre Propiedad</h5>
         <p class="card-text">Aquí va el texto de la dirección exacta de la propiedad.</p>
@@ -102,7 +102,7 @@
       </div>
     </div>
     <div class="card col-md-4 col-lg-3 col-sm-12" style="width: 18rem;">
-      <img  class="mt-0" src="https://hips.hearstapps.com/hmg-prod/images/casa-reformada-decorada-elegante-colores-neutros-tonos-pastel-salon-cocina-abierta-molduras-1669197336.jpg" class="card-img-top" alt="...">
+      <img class="mt-0" src="https://hips.hearstapps.com/hmg-prod/images/casa-reformada-decorada-elegante-colores-neutros-tonos-pastel-salon-cocina-abierta-molduras-1669197336.jpg" class="card-img-top" alt="...">
       <div class="card-body">
         <h5 class="card-title">Nombre Propiedad</h5>
         <p class="card-text">Aquí va el texto de la dirección exacta de la propiedad.</p>
@@ -110,7 +110,7 @@
       </div>
     </div>
     <div class="card col-md-4 col-lg-3 col-sm-12" style="width: 18rem;">
-      <img  class="mt-0" src="https://hips.hearstapps.com/hmg-prod/images/casa-reformada-decorada-elegante-colores-neutros-tonos-pastel-salon-cocina-abierta-molduras-1669197336.jpg" class="card-img-top" alt="...">
+      <img class="mt-0" src="https://hips.hearstapps.com/hmg-prod/images/casa-reformada-decorada-elegante-colores-neutros-tonos-pastel-salon-cocina-abierta-molduras-1669197336.jpg" class="card-img-top" alt="...">
       <div class="card-body">
         <h5 class="card-title">Nombre Propiedad</h5>
         <p class="card-text">Aquí va el texto de la dirección exacta de la propiedad.</p>
@@ -118,7 +118,7 @@
       </div>
     </div>
     <div class="card col-md-4 col-lg-3 col-sm-12" style="width: 18rem;">
-      <img  class="mt-0" src="https://hips.hearstapps.com/hmg-prod/images/casa-reformada-decorada-elegante-colores-neutros-tonos-pastel-salon-cocina-abierta-molduras-1669197336.jpg" class="card-img-top" alt="...">
+      <img class="mt-0" src="https://hips.hearstapps.com/hmg-prod/images/casa-reformada-decorada-elegante-colores-neutros-tonos-pastel-salon-cocina-abierta-molduras-1669197336.jpg" class="card-img-top" alt="...">
       <div class="card-body">
         <h5 class="card-title">Nombre Propiedad</h5>
         <p class="card-text">Aquí va el texto de la dirección exacta de la propiedad.</p>
@@ -126,7 +126,7 @@
       </div>
     </div>
     <div class="card col-md-4 col-lg-3 col-sm-12" style="width: 18rem;">
-      <img  class="mt-0" src="https://hips.hearstapps.com/hmg-prod/images/casa-reformada-decorada-elegante-colores-neutros-tonos-pastel-salon-cocina-abierta-molduras-1669197336.jpg" class="card-img-top" alt="...">
+      <img class="mt-0" src="https://hips.hearstapps.com/hmg-prod/images/casa-reformada-decorada-elegante-colores-neutros-tonos-pastel-salon-cocina-abierta-molduras-1669197336.jpg" class="card-img-top" alt="...">
       <div class="card-body">
         <h5 class="card-title">Nombre Propiedad</h5>
         <p class="card-text">Aquí va el texto de la dirección exacta de la propiedad.</p>
@@ -134,7 +134,7 @@
       </div>
     </div>
     <div class="card col-md-4 col-lg-3 col-sm-12" style="width: 18rem;">
-      <img  class="mt-0" src="https://hips.hearstapps.com/hmg-prod/images/casa-reformada-decorada-elegante-colores-neutros-tonos-pastel-salon-cocina-abierta-molduras-1669197336.jpg" class="card-img-top" alt="...">
+      <img class="mt-0" src="https://hips.hearstapps.com/hmg-prod/images/casa-reformada-decorada-elegante-colores-neutros-tonos-pastel-salon-cocina-abierta-molduras-1669197336.jpg" class="card-img-top" alt="...">
       <div class="card-body">
         <h5 class="card-title">Nombre Propiedad</h5>
         <p class="card-text">Aquí va el texto de la dirección exacta de la propiedad.</p>
@@ -142,7 +142,7 @@
       </div>
     </div>
     <div class="card col-md-4 col-lg-3 col-sm-12" style="width: 18rem;">
-      <img  class="mt-0" src="https://hips.hearstapps.com/hmg-prod/images/casa-reformada-decorada-elegante-colores-neutros-tonos-pastel-salon-cocina-abierta-molduras-1669197336.jpg" class="card-img-top" alt="...">
+      <img class="mt-0" src="https://hips.hearstapps.com/hmg-prod/images/casa-reformada-decorada-elegante-colores-neutros-tonos-pastel-salon-cocina-abierta-molduras-1669197336.jpg" class="card-img-top" alt="...">
       <div class="card-body">
         <h5 class="card-title">Nombre Propiedad</h5>
         <p class="card-text">Aquí va el texto de la dirección exacta de la propiedad.</p>
@@ -218,27 +218,27 @@
     <h3>Testimonios de nuestros clientes</h3>
     <div class="comentario d-flex align-items-center">
       <img src="img/iconoUsuario.png" alt="Imagen de usuario">
-      <p><em>Vender mi casa nunca fue tan fácil como con 'Vende tu Inmueble'. 
-        Desde el primer día, su equipo me brindó un apoyo excepcional. La plataforma 
-        intuitiva hizo que la publicación de mi propiedad fuera sencilla, y 
-        el alcance global atrajo a compradores potenciales de todo el mundo. ¡Gracias 
-        por hacer que el proceso sea tan transparente y exitoso!</em></p>
+      <p><em>Vender mi casa nunca fue tan fácil como con 'Vende tu Inmueble'.
+          Desde el primer día, su equipo me brindó un apoyo excepcional. La plataforma
+          intuitiva hizo que la publicación de mi propiedad fuera sencilla, y
+          el alcance global atrajo a compradores potenciales de todo el mundo. ¡Gracias
+          por hacer que el proceso sea tan transparente y exitoso!</em></p>
     </div>
     <div class="comentario d-flex align-items-center">
       <img src="img/iconoUsuario.png" alt="Imagen de usuario">
-      <p><em>Después de buscar mi nuevo hogar en diferentes plataformas, 'Vende tu Inmueble' 
-        destacó por su interfaz amigable y sus opciones variadas. El equipo de asesores 
-        respondió rápidamente a mis consultas y me guiaron durante todo el proceso. Ahora, 
-        gracias a ellos, estoy disfrutando de la casa de mis sueños. 
-        ¡Totalmente recomendado!</em></p>
+      <p><em>Después de buscar mi nuevo hogar en diferentes plataformas, 'Vende tu Inmueble'
+          destacó por su interfaz amigable y sus opciones variadas. El equipo de asesores
+          respondió rápidamente a mis consultas y me guiaron durante todo el proceso. Ahora,
+          gracias a ellos, estoy disfrutando de la casa de mis sueños.
+          ¡Totalmente recomendado!</em></p>
     </div>
     <div class="comentario d-flex align-items-center">
       <img src="img/iconoUsuario.png" alt="Imagen de usuario">
-      <p><em>Invertir en propiedades con 'Vende tu Inmueble' fue la mejor decisión que tomé. 
-        Su red global de oportunidades me permitió encontrar proyectos prometedores y 
-        rentables. El equipo de expertos me proporcionó información detallada y 
-        asesoramiento, brindándome la confianza necesaria para tomar decisiones acertadas. 
-        ¡Gracias por hacer que mi cartera de inversiones crezca con éxito!</em></p>
+      <p><em>Invertir en propiedades con 'Vende tu Inmueble' fue la mejor decisión que tomé.
+          Su red global de oportunidades me permitió encontrar proyectos prometedores y
+          rentables. El equipo de expertos me proporcionó información detallada y
+          asesoramiento, brindándome la confianza necesaria para tomar decisiones acertadas.
+          ¡Gracias por hacer que mi cartera de inversiones crezca con éxito!</em></p>
     </div>
 
   </div>
