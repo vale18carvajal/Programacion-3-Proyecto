@@ -33,7 +33,7 @@ $url = basename($_SERVER["PHP_SELF"], ".php");
               <a class="nav-link active" aria-current="page" href="inmueble.php">Propiedades</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#">Ubicación</a>
+              <a class="nav-link" href="ubicaciones.php">Ubicación</a>
             </li>
             <li class="nav-item">
               <a class="nav-link" href="contactenos.php">Contáctenos</a>
