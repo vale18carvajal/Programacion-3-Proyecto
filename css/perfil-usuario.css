@@ -1,0 +1,86 @@
+@import url(shared.css);
+:root{
+    /* Paleta de colores */
+--Azul-oscuro-1 : #023059; 
+--Azul-oscuro-2: #0D518C; 
+--Azul: #1C71A6; 
+--celeste: #9AC7D9;
+--texto-color-oscuro:#0D0D0D;
+--texto-color-claro: #F1F1F4;
+
+/*Fuente*/
+--fuente: Tahoma;
+--texto-color: 
+}
+
+.perfil{
+    margin: 15px auto;
+}
+.propiedades-usuario{
+    text-align: right;
+    margin: 25px auto 15px auto;
+    width: 70%;
+    display: flex;
+    justify-content: space-between;
+}
+
+#cerrar-sesion{
+    color: var(--Azul-oscuro-2);
+}
+
+#cerrar-sesion:hover{
+    text-decoration: underline;
+    cursor: pointer;
+    color: var(--Azul);
+}
+
+.vista{
+    text-align: center;
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+
+.vista img{
+    margin: 20px 0;
+    width: 240px;
+    height: 240px;
+    min-width: 150px;
+    min-height: 150px;
+    object-fit: cover;
+    border-radius: 200px;
+    -webkit-border-radius: 200px;
+    -moz-border-radius: 200px;
+    -ms-border-radius: 200px;
+    -o-border-radius: 200px;
+    border: 2px solid var(--celeste);
+    
+}
+.separador{
+    width: 70%;
+    height: 10px;
+    background-color: var(--Azul-oscuro-2);
+    opacity: 0.350;
+    margin: 15px auto;
+    border-radius: 20px;
+    -webkit-border-radius: 20px;
+    -moz-border-radius: 20px;
+    -ms-border-radius: 20px;
+    -o-border-radius: 20px;
+}
+.usuario-info{
+    width: 70%;
+    margin: 25px auto;
+}
+
+.botones{
+    text-align: center;
+    margin-top: 25px;
+}
+
+#cancelar,
+#confirmar{
+    display: none;
+}
+#actualizar{
+    display: inline;
+}

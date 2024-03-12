@@ -1,7 +1,7 @@
 <? include "shared/header.php" ?>
 <div class="row verificacion-usuario">
     <div class="titulo">
-        <h1 id="mensaje"><strong>Verificación de usario</strong></h1>
+        <h1 id="mensaje"><strong>Verificación de Usuario</strong></h1>
     </div>
     <div class="row formulario-inicio">
         <h2>Inicio de Sesión</h2>
@@ -58,7 +58,7 @@
                 <label class="form-check-label" for="exampleCheck1"><input type="checkbox" class="form-check-input" id="exampleCheck1">
                     Al crear una cuenta, acepta nuestra <a href="">Política de Privacidad</a></label>
             </div>
-            <button id="crear-cuenta" class="btn btn-azul">¡Crear Cuenta!</button>
+            <button type="submit" id="crear-cuenta" class="btn btn-azul">¡Crear Cuenta!</button>
         </div>
     </div>
 

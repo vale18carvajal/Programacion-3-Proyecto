@@ -43,7 +43,7 @@ $url = basename($_SERVER["PHP_SELF"], ".php");
             </li>
           </ul>
           <div class="d-flex align-items-center icono">
-            <a class="nav-link" href="#"><img src="img/iconoUsuario.png" alt="Icono usuario"></a> Mi perfil
+            <a class="nav-link" href="perfil-usuario.php"><img src="img/iconoUsuario.png" alt="Icono usuario">Mi perfil</a> 
           </div>
         </div>
       </div>
