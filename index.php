@@ -14,7 +14,7 @@
         <img src="img/icono-casa.png">
       </div> 
   </div>
-
+  <!-- Temporal -->
   <button class="btn btn-azul"> <a href="inmuebles.php">Todas las propiedades</a></button>
 
   <div class="row formulario mt-5">
