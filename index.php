@@ -242,5 +242,6 @@
     </div>
 
   </div>
+  <button class="btn btn-azul"> <a href="inmuebles.php">Todas las propiedades</a></button>
 </main>
 <?php include "shared/footer.php" ?>
