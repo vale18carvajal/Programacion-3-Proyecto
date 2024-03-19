@@ -1,17 +1,4 @@
 @import url(shared.css);
-:root{
-    /* Paleta de colores */
---Azul-oscuro-1 : #023059; 
---Azul-oscuro-2: #0D518C; 
---Azul: #1C71A6; 
---celeste: #9AC7D9;
---texto-color-oscuro:#0D0D0D;
---texto-color-claro: #F1F1F4;
-
-/*Fuente*/
---fuente: Tahoma;
---texto-color: 
-}
 
 .perfil{
     margin: 15px auto;
@@ -21,7 +8,7 @@
     margin: 25px auto 15px auto;
     width: 70%;
     display: flex;
-    justify-content: space-between;
+    justify-content: end;
 }
 
 #cerrar-sesion{
@@ -53,7 +40,7 @@
     -ms-border-radius: 200px;
     -o-border-radius: 200px;
     border: 2px solid var(--celeste);
-    
+
 }
 .separador{
     width: 70%;
@@ -84,3 +71,22 @@
 #actualizar{
     display: inline;
 }
+.dropdown{
+    text-align: center;
+    background-color: var(--Azul-oscuro-2);
+    width: 120px;
+    padding: 5px;
+    border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
+}
+.dropdown-menu a:hover{
+    color: var(--Azul-oscuro-2);
+    background-color: var(--seleccionado);
+}
+.dropdown-menu a{
+    color: var(--Azul-oscuro-2);
+}
+

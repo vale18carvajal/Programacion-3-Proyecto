@@ -1,0 +1,61 @@
+@import url(shared.css);
+
+h1{
+    color: var(--Azul-oscuro-2);
+    text-align: center;
+    margin-top: 18px;
+}
+
+h3{
+    color: var(--Azul-oscuro-2);
+}
+
+.reporte,
+.filtro{
+    width: 85%;
+    margin: 0 auto;
+}
+
+select{
+    margin: 15px 0;
+}
+
+#btn-generar{
+    display: block;
+    margin: 0 auto;
+}
+
+.separador{
+    width: 85%;
+    height: 3px;
+    background-color: var(--gris);
+    margin: 20px auto;
+    border-radius: 1z0px;
+    -webkit-border-radius: 1z0px;
+    -moz-border-radius: 1z0px;
+    -ms-border-radius: 1z0px;
+    -o-border-radius: 1z0px;
+}
+#btn-pdf{
+    margin: 15px 0;
+}
+
+
+#btn-pdf{
+    display: none;
+}
+
+#mensaje{
+    text-align: center ;
+}
+
+.reporte{
+    margin-bottom: 160px;
+}
+/* .d-footer{
+    Pego el footer en la par
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    left: 0;
+} */

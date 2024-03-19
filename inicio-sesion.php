@@ -36,11 +36,14 @@
             <label for="apellido2" class="form-label">Segundo Apellido</label>
             <input id="apellido2" class="form-control" type="text" placeholder="Apellido2">
             <br>
-            <label for="correo" class="form-label">Correo Electrónico</label>
-            <input id="correo" class="form-control" type="email" placeholder="ejemplo@correo.com">
+            <label for="nacimiento" class="form-label">Fecha de Nacimiento</label>
+            <input id="nacimiento" class="form-control" type="date">
             <br>
         </div>
         <div class="col-md-12 col-lg-6">
+            <label for="correo" class="form-label">Correo Electrónico</label>
+            <input id="correo" class="form-control" type="email" placeholder="ejemplo@correo.com">
+            <br>
             <label for="telefono" class="form-label">Número de Teléfono</label>
             <input id="telefono" class="form-control" type="text" placeholder="88886666">
             <br>

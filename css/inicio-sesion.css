@@ -1,17 +1,4 @@
 @import url(shared.css);
-:root{
-    /* Paleta de colores */
---Azul-oscuro-1 : #023059; 
---Azul-oscuro-2: #0D518C; 
---Azul: #1C71A6; 
---celeste: #9AC7D9;
---texto-color-oscuro:#0D0D0D;
---texto-color-claro: #F1F1F4;
-
-/*Fuente*/
---fuente: Tahoma;
---texto-color:
-}
 
 h2{
     color: var(--Azul-oscuro-2);

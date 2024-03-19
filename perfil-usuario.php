@@ -2,9 +2,24 @@
 
 <div class="perfil">
     <div class="propiedades-usuario">
-        <label id="cerrar-sesion">Cerrar Sesión</label>
-        <span><button id="" class="btn btn-azul">Mis propiedades</button></span>
+        <!-- <label id="cerrar-sesion">Cerrar Sesión</label>
+        <span><button id="" class="btn btn-azul">Mis propiedades</button></span> -->
+        <div class="nav-item dropdown justify-align-content-end">
+          <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            Opciones
+          </a>
+          <ul class="dropdown-menu">
+            <li><a class="dropdown-item" href="#">Propiedades</a></li>
+            <li><a class="dropdown-item" href="reportes.php">Generar reporte</a></li>
+            <li><hr class="dropdown-divider"></li>
+            <li><a class="dropdown-item" href="#">Cerrar Sesión</a></li>
+          </ul>
+        </div>
     </div>
+    <!-- <div class="f"> -->
+    
+    <!-- </div> -->
+
     <div class="vista">
         <h1>Mi perfil</h1>
         <img src="img/Foto-perfil-usuario.jpg" alt="Foto de perfil del usuario">
@@ -27,11 +42,14 @@
             <label for="apellido2" class="form-label">Segundo Apellido</label>
             <input id="apellido2" class="form-control" type="text" placeholder="Apellido2" disabled>
             <br>
-            <label for="correo" class="form-label">Correo Electrónico</label>
-            <input id="correo" class="form-control" type="email" placeholder="ejemplo@correo.com" disabled>
+            <label for="nacimiento" class="form-label">Fecha de Nacimiento</label>
+            <input id="nacimiento" class="form-control" type="date" disabled>
             <br>
         </div>
         <div class="col-md-12 col-lg-6">
+            <label for="correo" class="form-label">Correo Electrónico</label>
+            <input id="correo" class="form-control" type="email" placeholder="ejemplo@correo.com" disabled>
+            <br>
             <label for="telefono" class="form-label">Número de Teléfono</label>
             <input id="telefono" class="form-control" type="text" placeholder="88886666" disabled>
             <br>
