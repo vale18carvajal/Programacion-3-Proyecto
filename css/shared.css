@@ -86,8 +86,7 @@ footer{
 }
 a{
     color: #9AC7D9;
-    font-weight: bold;
-    
+    text-decoration: none;
 }
 .social img{
     margin: 0 7px;
@@ -122,4 +121,8 @@ a{
     background-color: var(--texto-color-claro);
     color: var(--Azul-oscuro-2);
     border: 2px solid var(--Azul-oscuro-2);
+}
+
+.f-info{
+    margin-top: 10px;
 }
