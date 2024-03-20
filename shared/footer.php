@@ -4,9 +4,12 @@
       </div>
       <div class="col-md-6 col-lg-4 contactos">
         <h4>Contactos</h4>
-        <img src="img/email.png" alt="íncono de correo"><a href="">vende_tu_inmueble@vtm.com</a> <br>
-        <img src="img/telefono.png" alt="íncono de teléfono"><a href="">506-2222-222</a><br>
-        <img src="img/whatsaap.png" alt="íncono de Whatsapp"><a href="">Whatsapp</a><br>
+        <div class="d-flex align-align-items-center justify-content-center f-info"><img src="img/email.png" alt="íncono de correo"><a href="">vende_tu_inmueble@vtm.com</a></div>
+        <div class="d-flex align-align-items-center justify-content-center f-info"><img src="img/telefono.png" alt="íncono de teléfono"><a href="">506-2222-222</a></div>
+        <div class="d-flex align-align-items-center justify-content-center f-info"><img src="img/whatsaap.png" alt="íncono de Whatsapp"><a href="">Whatsapp</a></div>
+        <div class="d-flex align-align-items-center justify-content-center f-info">
+          © 2024 Vende tu Inmueble S.A. Todos los derechos reservados.
+        </div>
       </div>
       <div class="col-md-6 col-lg-4 social">
         <h4>Redes Sociales</h4>
