@@ -59,11 +59,86 @@
         <div class="col-md-12 confirmacion">
             <div class="mb-3 form-check d-block">
                 <label class="form-check-label" for="exampleCheck1"><input type="checkbox" class="form-check-input" id="exampleCheck1">
-                    Al crear una cuenta, acepta nuestra <a href="">Política de Privacidad</a></label>
+                    Al crear una cuenta, acepta nuestra <a href="" id="politicas">Política de Privacidad</a></label>
             </div>
             <button type="submit" id="crear-cuenta" class="btn btn-azul">¡Crear Cuenta!</button>
         </div>
     </div>
+    
+    <dialog id="modal">
+        <div>
+        <h3>Política de privacidad</h3>
+        </div>
+        <div class="separador"></div>
+        <p>
+            Esta Política de Privacidad describe cómo Vende tu Inmueble S.A. recopila, utiliza y comparte la información personal de los usuarios que utilizan nuestros servicios para la compra de bienes raíces, incluidas casas, apartamentos y terrenos, a través de nuestra plataforma en línea.
+            <br>
+            Al aceptar esta Política de Privacidad, usted reconoce y acepta expresamente que nosotros podamos recopilar, utilizar y compartir su información personal de acuerdo con los términos y condiciones establecidos a continuación:
+            <br>
+            <strong>1. Información que Recopilamos:</strong>
+            <br>
+            Recopilamos diversos tipos de información personal cuando crea una cuenta de usuario en nuestra plataforma. Esta información puede incluir, pero no se limita a:
+            <br>
+        <ul>
+            <li>Nombre y apellidos.</li>
+            <li>Número de identificación o cédula.</li>
+            <li>Dirección de correo electrónico.</li>
+            <li>Contraseña.</li>
+            <li>Fotografía de perfil.</li>
+            <li>Fecha de nacimiento.</li>
+            <li>Número de teléfono.</li>
+            <li>Nombre de usuario.</li>
+        </ul>
+        <br>
+        <strong>2. Uso de la Información:</strong>
+        <br>
+        Utilizamos la información personal recopilada para los siguientes fines:
+        <br>
+        <ul>
+            <li>Facilitar la creación y gestión de su cuenta de usuario.</li>
+            <li>Permitir la comunicación entre usted y otros usuarios.</li>
+            <li>Procesar transacciones relacionadas con la compra de bienes raíces.</li>
+            <li>Proporcionarle información sobre productos, servicios y ofertas relevantes.</li>
+            <li>Personalizar su experiencia en nuestra plataforma.</li>
+            <li>Cumplir con nuestras obligaciones legales y regulaciones aplicables.</li>
+        </ul>
+        <br>
+        <strong>3. Compartir de la Información:</strong>
+        <br>
+        Podemos compartir su información personal con terceros en las siguientes circunstancias:
+        <br>
+        <ul>
+            <li>Con proveedores de servicios que nos ayudan a operar nuestro negocio y brindar nuestros servicios, sujetos a acuerdos de confidencialidad adecuados.</li>
+            <li>Con autoridades gubernamentales u otras partes conforme a la ley o en respuesta a procesos legales válidos.</li>
+            <li>En caso de fusión, adquisición o venta de activos, en cuyo caso transferiremos la información personal a la parte adquirente.</li>
+        </ul>
+        <br>
+        <strong>4. Seguridad de la Información:</strong>
+        <br>
+        Implementamos medidas de seguridad técnicas, administrativas y físicas para proteger su información personal contra el acceso no autorizado, la divulgación o el uso indebido.
+        <br>
+        <strong>5. Sus Derechos:</strong>
+        <br>
+        Usted tiene derechos sobre su información personal, incluido el derecho a acceder, corregir, eliminar y objetar el procesamiento de sus datos personales. Puede ejercer estos derechos enviándonos una solicitud a través de los medios de contacto proporcionados al final de esta Política de Privacidad.
+        <br>
+        <strong>6. Cambios en la Política de Privacidad:</strong>
+        <br>
+        Nos reservamos el derecho de actualizar esta Política de Privacidad en cualquier momento. Le notificaremos sobre cambios significativos en la forma en que tratamos su información personal enviándole una notificación a través de los detalles de contacto proporcionados en su cuenta de usuario.
+        <br>
+        <strong>7. Consentimiento:</strong>
+        <br>
+        Al aceptar esta Política de Privacidad y al utilizar nuestros servicios, usted consiente expresamente a la recopilación, uso y divulgación de su información personal de acuerdo con los términos y condiciones aquí establecidos.
+        <br>
+        <strong>8. Contacto:</strong>
+        <br>
+        Si tiene alguna pregunta o inquietud sobre esta Política de Privacidad o sobre el tratamiento de su información personal, no dude en ponerse en contacto con nosotros a través de vende_tu_inmueble@vtm.com
+        <br>
+        <br>
+        Fecha de Entrada en Vigencia: 20 de marzo del 2024
+        <br>
+        Última actualización: 20 de marzo del 2024</p>
+        <button id="cerrar-politicas" class="btn btn-success">Entendido</button>
+    </dialog>
 
 </div>
 

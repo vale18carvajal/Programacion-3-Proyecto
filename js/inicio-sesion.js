@@ -3,3 +3,13 @@ $("#nueva-cuenta").click(function (e) {
     $(".formulario-inicio").css("display", "none");
     $("#mensaje").html(`<strong> Nuevo Usuario </strong>`);
 });
+
+$("#politicas").click(function (e) { 
+   e.preventDefault();
+    $("#modal").show();
+});
+
+$("#cerrar-politicas").click(function (e) { 
+    // e.preventDefault();
+    $("#modal").hide();
+ });
