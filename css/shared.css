@@ -53,8 +53,14 @@ h3{
 .icono img{
     width: 35px;
     height: 35px;
+    object-fit: cover;
     margin-right: 8px;
     cursor: pointer;
+    border-radius: 20px;
+    -webkit-border-radius: 20px;
+    -moz-border-radius: 20px;
+    -ms-border-radius: 20px;
+    -o-border-radius: 20px;
 }
 
 .icono{
@@ -62,7 +68,7 @@ h3{
     color: var(--texto-color-claro);
     font-size: medium;
     height: 50px;
-    margin:5px 5px 0 0;
+    margin:5px 20px 0 0;
     cursor: pointer;
 }
 
