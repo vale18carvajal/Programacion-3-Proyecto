@@ -1,7 +1,7 @@
 <? include "shared/header.php"?>
     <main class="contenedor">
         <div class="col-md-12 col-lg-12">
-            <h1>Nuestras sedes</h1>
+            <h1>Nuestras Oficinas</h1>
         </div>
 
         <div class="row ubicacion align-items-center">
