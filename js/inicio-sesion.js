@@ -4,12 +4,12 @@ $("#nueva-cuenta").click(function (e) {
     $("#mensaje").html(`<strong> Nuevo Usuario </strong>`);
 });
 
-$("#politicas").click(function (e) { 
-   e.preventDefault();
-    $("#modal").show();
-});
+// $("#politicas").click(function (e) { 
+//    e.preventDefault();
+//     $("#modal").show();
+// });
 
-$("#cerrar-politicas").click(function (e) { 
-    // e.preventDefault();
-    $("#modal").hide();
- });
+// $("#cerrar-politicas").click(function (e) { 
+//     // e.preventDefault();
+//     $("#modal").hide();
+//  });
