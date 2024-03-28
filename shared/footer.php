@@ -26,5 +26,8 @@
     <script src="js/<?php echo $url ?>.js"></script>
     <!-- Para iconos -->
     <script src="https://kit.fontawesome.com/97cef9f55a.js" crossorigin="anonymous"></script>
+    <!-- Para alertas -->
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
 </body>
 </html>
