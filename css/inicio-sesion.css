@@ -31,6 +31,7 @@ h2{
     color: var(--Azul) !important;
     text-decoration: none !important;
     font-weight: normal;
+    cursor: pointer;
 }
 .formulario-inicio a:hover,
 .crear-usuario a:hover{
@@ -59,7 +60,7 @@ h2{
 .confirmacion{
     text-align: center;
 }
-dialog{
+/* dialog{
    width: 50vw !important;
    height: 70vh;
    overflow-y: auto;
@@ -72,4 +73,4 @@ dialog{
     height: 2px;
     background-color: var(--gris);
     margin-bottom: 10px;
-}
+} */
