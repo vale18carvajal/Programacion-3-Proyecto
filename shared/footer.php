@@ -24,5 +24,7 @@
     <!-- Pendiente cambiar los scripts de abajo -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
     <script src="js/<?php echo $url ?>.js"></script>
+    <!-- Para iconos -->
+    <script src="https://kit.fontawesome.com/97cef9f55a.js" crossorigin="anonymous"></script>
 </body>
 </html>
