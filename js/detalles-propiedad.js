@@ -24,8 +24,8 @@ function deshabilitar(){
     $("input").attr("disabled", true);
     $("select").attr("disabled", true);
     $("textarea").attr("disabled", true);
-    //Ocultar boton vendedores
-    $("#cambiar-vendedor").css("display", "none");
+    $("#cambiar-vendedor").attr("disabled", true);
+    $(".eliminar").attr("disabled", true);
 }
 
 function habilitar(){
@@ -42,19 +42,37 @@ function habilitar(){
               // Obtener el atributo id de cada elemento
               var ids = $(this).attr('id');
               // se habilitan los cambios que sí se pueden modificar
-              if (ids != "idPropiedad" && ids != "nombreVendedor" && ids != "correoVendedor" && ids != "telefonoVendedor"){
+              if (ids != "idPropiedad" && ids != "idVendedor" && ids != "nombreVendedor" && ids != "correoVendedor" && ids != "telefonoVendedor"){
                 $(`#${ids}`).attr("disabled", false);
               }
           });
     });
-    //Habilitar el boton vendedores
-    $("#cambiar-vendedor").css("display", "inline-block");
+    //Habilitar el boton vendedores y boton eliminar
+    $("#cambiar-vendedor").attr("disabled", false);
+    $(".eliminar").attr("disabled", false);
 }
 
 $("#cambiar-vendedor").click(function (e) { 
     e.preventDefault();
     crearModal();
 });
+
+$("#agregar-vendedor").click(function (e) { 
+    // e.preventDefault();
+    let prueba = $(".nuevo");
+    //Validación si ya se encuentra abierto
+    if (prueba.length == 0) {
+        nuevoVendedor();
+    }
+    
+});
+
+$(".modal-body").on("click", "#cancelarOpc", function(e){
+    // e.preventDefault();
+    $(".nuevo").remove();
+});
+
+
 
 function crearModal(){
     const infoModal = `
@@ -63,21 +81,61 @@ function crearModal(){
             <td>Mark</td>
             <td>Otto</td>
             <td>Ramírez</td>
-            <td><input type="checkbox"></td>
+            <td><button class="btn btn-seleccion"><i class="fa-solid fa-circle-check"></i> Seleccionar</button></td>
         </tr>
         <tr>s
             <th scope="row">2</th>
             <td>Jacob</td>
             <td>Thornton</td>
             <td>Jim</td>
-            <td><input type="checkbox"></td>
+            <td><button class="btn btn-seleccion"><i class="fa-solid fa-circle-check"></i> Seleccionar</button></td>
         </tr>
         <tr>
             <th scope="row">3</th>
             <td>Larry</td>
             <td>Guzmán</td>
             <td>Murillo</td>
-            <td><input type="checkbox"></td>
+            <td><button class="btn btn-seleccion"><i class="fa-solid fa-circle-check"></i> Seleccionar</button></td>
         </tr>`;
     $("tbody").html(infoModal);
 }
+
+function nuevoVendedor(){
+    const entradaDatos = `
+                        <div class="row nuevo">
+                        <div class="col-12 col-6">
+                            <h3 class="text-center">Nuevo Vendedor</h3>
+                            <label for="cedula" class="form-label">Cédula</label>
+                            <input name="cedula" id="cedula" class="form-control" type="number">
+                        </div>
+                        <div class="col-12 col-6">
+                            <label for="nombre" class="form-label">Nombre</label>
+                            <input name="nombre" id="nombre" class="form-control" type="text">
+                        </div>
+                        <div class="col-12 col-6">
+                            <label for="apellido1" class="form-label">1° Apellido</label>
+                            <input name="apellido1" id="apellido1" class="form-control" type="text">
+                        </div>
+                        <div class="col-12 col-6">
+                            <label for="apellido2" class="form-label">2° Apellido</label>
+                            <input name="apellido2" id="apellido2" class="form-control" type="text">
+                        </div>
+                        <div class="col-12 col-6">
+                            <label for="correo" class="form-label">Correo electrónico</label>
+                            <input name="correo" id="apellido2" class="form-control" type="email">
+                        </div>
+                        <div class="col-12 col-6">
+                            <label for="telefono" class="form-label">Teléfono</label>
+                            <input name="telefono" id="telefono" class="form-control" type="number">
+                        </div>
+                        <div class="mb-4 d-block justify-content-center">
+                        <button type="submit" id="guardarVendedor" class="btn btn-success">Guardar Cambios</button>
+                        <button type="button" id="cancelarOpc" class="btn btn-danger">Cancelar</button>
+                        </div>
+                    </div>
+    `;
+
+    $(".modal-body").prepend(entradaDatos);
+}
+
+

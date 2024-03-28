@@ -37,17 +37,19 @@
         <a href="#imagenes"><button type="button" id="agregar-img" class="btn btn-azul">Añadir imagen</button></a>
     </div>
     <div class="datos-propiedad justify-content-center">
-        <fieldset id="info-propiedad">
-            <div class="justify-content-center mt-3">
-                <label for="idPropiedad">ID</label>
+        <fieldset class="row" id="info-propiedad">
+            <legend>Información general del la propiedad<div class="separador"></div>
+            </legend>
+            <div class=" col-lg-6 col-md-6">
+                <label for="idPropiedad" class="form-label">ID</label>
                 <input name="idPropiedad" id="idPropiedad" class="form-control" type="text">
             </div>
 
-            <div>
+            <div class="col-lg-6 col-md-6">
                 <label for="nombreInmueble" class="form-label">Nombre del Inmueble</label>
                 <input name="nombreInmueble" id="nombreInmueble" class="form-control" type="text">
             </div>
-            <div>
+            <div class="col-lg-6 col-md-6">
                 <label for="tipoInmueble" class="form-label">Tipo de Inmueble</label>
                 <select name="tipoInmueble" id="tipoInmueble" class="form-select" aria-label="Selección de tipo de inmueble">
                     <option value="1">Casa</option>
@@ -55,7 +57,7 @@
                     <option value="3">Terreno</option>
                 </select>
             </div>
-            <div>
+            <div class="col-lg-6 col-md-6">
                 <label for="provincia" class="form-label">Provincia</label>
                 <select name="provincia" id="provincia" class="form-select" aria-label="Selección de provincia">
                     <option selected>Seleccionar</option>
@@ -68,82 +70,90 @@
                     <option value="7">Limón</option>
                 </select>
             </div>
-            <div class="d-flex align-items-top">
+            <div class="col-lg-6 col-md-6">
                 <label for="detalles" class="form-label">Dirección</label>
-                <textarea class="form-control" placeholder="Detalles de dirección" id="detalles" name="detalles" style="height: 60px"></textarea>
+                <textarea name="detalles" id="detalles" class="form-control" placeholder="Detalles de dirección" style="height: 60px"></textarea>
             </div>
-            <div>
+            <div class="col-lg-6 col-md-6">
                 <label for="estado" class="form-label">Estado</label>
                 <select name="estado" id="estado" class="form-select" aria-label="Selección de tipo de usuario">
                     <option value="1">Disponible</option>
                     <option value="2">No disponible</option>
                 </select>
             </div>
-            <div>
+            <div class="col-lg-6 col-md-6">
                 <label for="precio" class="form-label">Precio $</label>
                 <input name="precio" id="precio" class="form-control" type="number">
             </div>
-            <div>
+            <div class="col-lg-6 col-md-6">
                 <label for="habitaciones" class="form-label">Cantidad de Habitaciones</label>
                 <input name="habitaciones" id="habitaciones" class="form-control" type="number">
             </div>
-            <div>
+            <div class="col-lg-6 col-md-6">
                 <label for="banios" class="form-label">Cantidad de Baños</label>
                 <input name="banios" id="banios" class="form-control" type="number">
             </div>
-            <div>
+            <div class="col-lg-6 col-md-6">
                 <label for="vehiculos" class="form-label">Espacio para Vehículos</label>
                 <input name="vehiculos" id="vehiculos" class="form-control" type="number">
             </div>
         </fieldset>
-        <fieldset id="info-vendedor">
-            <div>
+        <fieldset class="row" id="info-vendedor">
+            <legend>Información del vendedor <div class="separador"></div>
+            </legend>
+            <div class="col-lg-6 col-md-6">
                 <label for="idVendedor" class="form-label">ID del vendedor</label>
-                <input id="idVendedor" class="form-control" type="number">
-                <a name="cambiar-vendedor" id="cambiar-vendedor" data-bs-toggle="modal" data-bs-target="#modal" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Cambiar vendedor"><img src="img/icono-cambiar.png" alt="Cambiar Vendedor"></a>
+                <div>
+                    <input name="idVendedor" id="idVendedor" class="form-control" type="number">
+                    <button id="cambiar-vendedor" data-bs-toggle="modal" data-bs-target="#modal" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Seleccionar vendedor" class="btn btn-azul"><i class="fa-solid fa-address-book"></i></button>
+                </div>
             </div>
-            <div>
+            <div class="col-lg-6 col-md-6">
                 <label for="nombreVendedor" class="form-label">Nombre del vendedor</label>
                 <input name="nombreVendedor" id="nombreVendedor" class="form-control" type="number" disabled>
             </div>
-            <div>
+            <div class="col-lg-6 col-md-6">
                 <label for="correoVendedor" class="form-label">Correo del vendedor</label>
                 <input name="correoVendedor" id="correoVendedor" class="form-control" type="email" disabled>
             </div>
-            <div>
+            <div class="col-lg-6 col-md-6">
                 <label for="telefonoVendedor" class="form-label">Teléfono del vendedor</label>
                 <input name="telefonoVendedor" id="telefonoVendedor" class="form-control" type="number" disabled>
             </div>
         </fieldset>
-        <fieldset id="imagenes">
-            <div>
+        <fieldset class="row" id="imagenes">
+            <legend>Imágenes de la propiedad <div class="separador"></div>
+            </legend>
+            <div class="col-lg-6 col-md-6">
                 <label for="foto1" class="form-label">Foto de la propiedad 1</label>
                 <input name="foto1" id="foto1" class="form-control" type="file">
             </div>
-            <div>
+            <div class="col-lg-6 col-md-6">
                 <label for="foto2" class="form-label">Foto de la propiedad 2</label>
                 <input name="foto2" id="foto2" class="form-control" type="file">
             </div>
-            <div>
+            <div class="col-lg-6 col-md-6">
                 <label for="foto3" class="form-label">Foto de la propiedad 3</label>
                 <input name="foto3" id="foto3" class="form-control" type="file">
             </div>
             <!-- El sisguiente input tiene que ser dinamico ya que es opcional -->
-            <div>
+            <div class="col-lg-6 col-md-6">
                 <label class="form-label">Foto de la propiedad n</label>
-                <input class="form-control" type="file">
-                <button type="button" class="btn-close" aria-label="borrar" disabled></button>
+                <div>
+                    <input class="form-control f-adicional" type="file">
+                    <button type="button" class="btn-close eliminar" aria-label="borrar"></button>
+                </div>
             </div>
         </fieldset>
 
-        <div class="opciones">
+        <div class="opciones col-lg-12 col-md-12">
             <button type="button" id="editar" class="btn btn-azul">Editar Datos</button>
             <button type="submit" id="guardar" class="btn btn-success">Guardar Cambios</button>
             <button type="button" id="cancelar" class="btn btn-danger">Cancelar</button>
         </div>
     </div>
     <!-- Modal -->
-    <div class="modal fade" id="modal" tabindex="-1" aria-labelledby="Modal de políticas de Privacidad" aria-hidden="true" data-bs-backdrop="static">
+    <div class="modal fade" id="modal" tabindex="-1" aria-labelledby="Modal vendedores" aria-hidden="true" data-bs-backdrop="static">
         <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
             <div class="modal-content">
                 <div class="modal-header">
@@ -151,6 +161,38 @@
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
                 <div class="modal-body">
+                    <!-- <div class="row">
+                        <div class="col-12 col-6">
+                            <h3 class="text-center">Nuevo Vendedor</h3>
+                            <label for="cedula" class="form-label">Cédula</label>
+                            <input name="cedula" id="cedula" class="form-control" type="number">
+                        </div>
+                        <div class="col-12 col-6">
+                            <label for="nombre" class="form-label">Nombre</label>
+                            <input name="nombre" id="nombre" class="form-control" type="text">
+                        </div>
+                        <div class="col-12 col-6">
+                            <label for="apellido1" class="form-label">1° Apellido</label>
+                            <input name="apellido1" id="apellido1" class="form-control" type="text">
+                        </div>
+                        <div class="col-12 col-6">
+                            <label for="apellido2" class="form-label">2° Apellido</label>
+                            <input name="apellido2" id="apellido2" class="form-control" type="text">
+                        </div>
+                        <div class="col-12 col-6">
+                            <label for="correo" class="form-label">Correo electrónico</label>
+                            <input name="correo" id="apellido2" class="form-control" type="email">
+                        </div>
+                        <div class="col-12 col-6">
+                            <label for="telefono" class="form-label">Teléfono</label>
+                            <input name="telefono" id="telefono" class="form-control" type="number">
+                        </div>
+                        <div class="mb-4 d-block justify-content-center">
+                        <button type="submit" id="guardarVendedor" class="btn btn-success">Guardar Cambios</button>
+                        <button type="button" id="cancelarOpc" class="btn btn-danger">Cancelar</button>
+                        </div>
+                    </div> -->
+                    <button id="agregar-vendedor" class="btn btn-success"><i class="fa-solid fa-user-plus"></i> Añadir</button>
                     <!-- tabla para seleccionar vendedor -->
                     <table class="table">
                         <thead>

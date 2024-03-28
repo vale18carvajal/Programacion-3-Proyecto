@@ -1,5 +1,5 @@
 <?php include "shared/header.php" ?>
-<main>
+<main class="p-4">
     <h1>Centro de Propiedades</h1>
     <a href="detalles-propiedad.php"><button id="agregar-propiedad" class="btn btn-success"><img src="img/icono-añadir-persona.png" alt="añadir">Añadir</button></a>
     <table class="table table-striped">

@@ -5,7 +5,7 @@ body{
 
 #regresar{
     margin-top: 25px;
-    margin-left: 20%;
+    margin-left: 10%;
 }
 
 h1{
@@ -22,10 +22,14 @@ h1{
 #vistaPrevia img{
     width: 100%;
     object-fit: cover;
+    border-radius: 20px;
+    -webkit-border-radius: 20px;
+    -moz-border-radius: 20px;
+    -ms-border-radius: 20px;
+    -o-border-radius: 20px;
 }
 
 p{
-  
     background-color: var(--texto-color-claro);
     border-radius: 15px;
     -webkit-border-radius: 15px;
@@ -38,37 +42,37 @@ p{
 
 
 .datos-propiedad{
-    width: 50vw;
+    width: 80vw;
     margin: 20px auto;
-    border: 1px solid rgba(55, 55, 55, 0.3);
+    /* border: 1px solid rgba(55, 55, 55, 0.3); */
     padding: 10px;
-    border-radius: 15px;
+    /* border-radius: 15px;
     -webkit-border-radius: 15px;
     -moz-border-radius: 15px;
     -ms-border-radius: 15px;
-    -o-border-radius: 15px;
+    -o-border-radius: 15px; */
 }
 
-label{
+/* label{
     width: 30%;
     min-width: 50px;
     text-align: right;
     font-weight: bold;
-}
-input, select, textarea{
+} */
+/* input, select, textarea{
     width: 60% !important;
     text-align: left !important;
     
-}
+} */
 
 label, input, select, textarea{
-    display: inline-block !important;
+    /* display: inline-block !important; */
     margin-bottom: 20px ;
 }
 
-textarea{
+/* textarea{
     margin-left: 4px;
-}
+} */
 
 #agregar-img
 ,#guardar
@@ -90,7 +94,7 @@ textarea{
     cursor: pointer;
 }
 
-#cambiar-vendedor img:hover{
+#cambiar-vendedor .btn:hover{
     transform: translateY(-5px);
     -webkit-transform: translateY(-5px);
     -moz-transform: translateY(-5px);
@@ -101,4 +105,45 @@ textarea{
     -moz-transition: transform 0.4s;
     -ms-transition: transform 0.4s;
     -o-transition: transform 0.4s;
+}
+
+
+legend{
+    color: var(--Azul-oscuro-2);
+    border-bottom: 1px dotted var(--seleccionado);
+    width: 100%;
+    margin: 40px 10px;
+    padding: 0 0 10px 0 !important;
+}
+
+#idVendedor,
+.f-adicional{
+    width: 80%;
+}
+
+#cambiar-vendedor,
+.eliminar{
+    width: 7%;
+}
+
+#idVendedor,
+#cambiar-vendedor,
+.eliminar,
+.f-adicional{
+    display: inline-block;
+}
+
+#agregar-vendedor,
+#guardarVendedor,
+#cancelarOpc{
+    font-size: small;
+}
+
+.btn-seleccion{
+    color: var(--Azul-oscuro-2);
+    font-size: small;
+}
+.btn-seleccion:hover{
+    color: var(--texto-color-claro);
+    background-color: var(--Azul-oscuro-2);
 }
