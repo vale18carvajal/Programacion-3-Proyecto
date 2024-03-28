@@ -1,0 +1,104 @@
+@import url(shared.css);
+body{
+    background-color: var(--texto-color-claro);
+}
+
+#regresar{
+    margin-top: 25px;
+    margin-left: 20%;
+}
+
+h1{
+    text-align: center;
+    color: var(--Azul-oscuro-2);
+    margin: 20px 0;
+    font-weight: bold !important;  
+}
+
+#vistaPrevia{
+    width: 40vw;
+    margin: 20px auto;
+}
+#vistaPrevia img{
+    width: 100%;
+    object-fit: cover;
+}
+
+p{
+  
+    background-color: var(--texto-color-claro);
+    border-radius: 15px;
+    -webkit-border-radius: 15px;
+    -moz-border-radius: 15px;
+    -ms-border-radius: 15px;
+    -o-border-radius: 15px;
+    color: var(--Azul-oscuro-2);
+    text-align: center !important;
+}
+
+
+.datos-propiedad{
+    width: 50vw;
+    margin: 20px auto;
+    border: 1px solid rgba(55, 55, 55, 0.3);
+    padding: 10px;
+    border-radius: 15px;
+    -webkit-border-radius: 15px;
+    -moz-border-radius: 15px;
+    -ms-border-radius: 15px;
+    -o-border-radius: 15px;
+}
+
+label{
+    width: 30%;
+    min-width: 50px;
+    text-align: right;
+    font-weight: bold;
+}
+input, select, textarea{
+    width: 60% !important;
+    text-align: left !important;
+    
+}
+
+label, input, select, textarea{
+    display: inline-block !important;
+    margin-bottom: 20px ;
+}
+
+textarea{
+    margin-left: 4px;
+}
+
+#agregar-img
+,#guardar
+,#cancelar{
+    display: none;
+    margin: 0 auto;
+    margin-top: 10px;
+    width: 30%;
+}
+
+#editar{
+    display: block;
+    margin: 10px auto 10px auto;
+    width: 30%;
+}
+#cambiar-vendedor img{
+    width: 30px;
+    height: 30px;
+    cursor: pointer;
+}
+
+#cambiar-vendedor img:hover{
+    transform: translateY(-5px);
+    -webkit-transform: translateY(-5px);
+    -moz-transform: translateY(-5px);
+    -ms-transform: translateY(-5px);
+    -o-transform: translateY(-5px);
+    transition: transform 0.4s;
+    -webkit-transition: transform 0.4s;
+    -moz-transition: transform 0.4s;
+    -ms-transition: transform 0.4s;
+    -o-transition: transform 0.4s;
+}
