@@ -9,8 +9,9 @@
             Opciones
           </a>
           <ul class="dropdown-menu">
-            <li><a class="dropdown-item" href="#">Propiedades</a></li>
+            <li><a class="dropdown-item" href="CRUD-propiedades.php">Propiedades</a></li>
             <li><a class="dropdown-item" href="reportes.php">Generar reporte</a></li>
+            <li><a class="dropdown-item" href="CRUD-usuarios.php">Control de usuarios</a></li>
             <li><hr class="dropdown-divider"></li>
             <li><a class="dropdown-item" href="#">Cerrar Sesión</a></li>
           </ul>
