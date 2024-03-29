@@ -1,0 +1,51 @@
+@import url(shared.css);
+
+h1{
+    text-align: center;
+    color: var(--Azul-oscuro-2);
+    margin: 25px 0;
+}
+
+#agregar-usuario img{
+    width: 20px;
+    height: 20px;
+    margin-right: 7px;
+}
+
+#agregar-usuario{
+    margin-bottom: 10px;
+}
+
+.img-perfil{
+    width: 60px;
+    height: 60px;
+    object-fit: cover;
+    border-radius: 30px;
+    -webkit-border-radius: 30px;
+    -moz-border-radius: 30px;
+    -ms-border-radius: 30px;
+    -o-border-radius: 30px;
+    border: 1px solid var(--Azul-oscuro-1);
+}
+
+.boton-crud{
+    border: none;
+    width: 28px;
+    height: 28px;
+    margin-right: 20px;
+    margin-top: 15px;
+    cursor: pointer;
+}
+
+.boton-crud:hover{
+    transform: translateY(-5px);
+    -webkit-transform: translateY(-5px);
+    -moz-transform: translateY(-5px);
+    -ms-transform: translateY(-5px);
+    -o-transform: translateY(-5px);
+    transition: transform 0.4s;
+    -webkit-transition: transform 0.4s;
+    -moz-transition: transform 0.4s;
+    -ms-transition: transform 0.4s;
+    -o-transition: transform 0.4s;
+}
