@@ -12,8 +12,8 @@
         <label for="disponibilidad"><strong>Disponibilidad</strong></label>
         <select id="disponibilidad" class="form-select" aria-label="Tipo de propiedad">
             <option selected>Seleccionar</option>
-            <option value="disponible">Dispoible</option>
-            <option value="no-disponible">No Disponible</option>
+            <option value="1">Disponible</option>
+            <option value="2">No Disponible</option>
         </select>
     </div>
 
@@ -40,7 +40,7 @@
             <option value="terreno">Terreno</option>
         </select>
     </div>
-    <div class=" hh">
+    <div>
         <button id="btn-generar" class="btn btn-azul">Generar Reporte</button>
     </div>
 </div>
