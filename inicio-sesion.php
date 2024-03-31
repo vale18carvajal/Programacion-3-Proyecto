@@ -38,8 +38,8 @@
             <input name="apellido2" id="apellido2" class="form-control" type="text" placeholder="Apellido2" required>
         </div>
         <div class="col-md-12 col-lg-6 mt-3">
-            <label for="nacimiento" class="form-label">Fecha de Nacimiento</label>
-            <input name="nacimiento" id="nacimiento" class="form-control" type="date" required>
+            <label for="fecha_nacimiento" class="form-label">Fecha de Nacimiento</label>
+            <input name="fecha_nacimiento" id="fecha_nacimiento" class="form-control" type="date" required>
         </div>
         <div class="col-md-12 col-lg-6 mt-3">
             <label for="correo" class="form-label">Correo Electrónico</label>
@@ -50,16 +50,16 @@
             <input name="telefono" id="telefono" class="form-control" type="number" placeholder="88886666" required min="0">
         </div>
         <div class="col-md-12 col-lg-6 mt-3">
-            <label for="usuario" class="form-label">Nombre de Usuario</label>
-            <input name="usuario" id="usuario" class="form-control" type="text" placeholder="Nombre_Usuario33" required>
+            <label for="nombre_usuario" class="form-label">Nombre de Usuario</label>
+            <input name="nombre_usuario" id="nombre_usuario" class="form-control" type="text" placeholder="Nombre_Usuario33" required>
         </div>
         <div class="col-md-12 col-lg-6 mt-3">
             <label for="clave" class="form-label">Contraseña</label>
             <input name="clave" id="clave" class="form-control" type="password" placeholder="••••••••••••••••" required>
         </div>
         <div class="col-md-12 col-lg-6 mt-3">
-            <label for="foto" class="form-label">Foto de Usuario</label>
-            <input name="foto" id="foto" class="form-control" type="file">
+            <label for="foto_perfil" class="form-label">Foto de Usuario</label>
+            <input name="foto_perfil" id="foto_perfil" class="form-control" type="file">
         </div>
         <div class="col-md-12 confirmacion mt-4">
             <div class="mb-3 form-check d-block">
