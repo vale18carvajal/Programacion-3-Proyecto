@@ -41,25 +41,25 @@
             <legend>Información general del la propiedad<div class="separador"></div>
             </legend>
             <div class=" col-lg-6 col-md-6">
-                <label for="idPropiedad" class="form-label">ID</label>
-                <input name="idPropiedad" id="idPropiedad" class="form-control" type="text">
+                <label for="id" class="form-label">ID</label>
+                <input name="id" id="id" class="form-control" type="text">
             </div>
 
             <div class="col-lg-6 col-md-6">
-                <label for="nombreInmueble" class="form-label">Nombre del Inmueble</label>
-                <input name="nombreInmueble" id="nombreInmueble" class="form-control" type="text">
+                <label for="nombre_inmueble" class="form-label">Nombre del Inmueble</label>
+                <input name="nombre_inmueble" id="nombre_inmueble" class="form-control" type="text">
             </div>
             <div class="col-lg-6 col-md-6">
-                <label for="tipoInmueble" class="form-label">Tipo de Inmueble</label>
-                <select name="tipoInmueble" id="tipoInmueble" class="form-select" aria-label="Selección de tipo de inmueble">
+                <label for="tipo_inmueble_fk" class="form-label">Tipo de Inmueble</label>
+                <select name="tipo_inmueble_fk" id="tipo_inmueble_fk" class="form-select" aria-label="Selección de tipo de inmueble">
                     <option value="1">Casa</option>
                     <option value="2">Apartamento</option>
                     <option value="3">Terreno</option>
                 </select>
             </div>
             <div class="col-lg-6 col-md-6">
-                <label for="provincia" class="form-label">Provincia</label>
-                <select name="provincia" id="provincia" class="form-select" aria-label="Selección de provincia">
+                <label for="provincia_fkdireccion_exacta" class="form-label">Provincia</label>
+                <select name="provincia_fkdireccion_exacta" id="provincia_fkdireccion_exacta" class="form-select" aria-label="Selección de provincia">
                     <option selected>Seleccionar</option>
                     <option value="1">San José</option>
                     <option value="2">Cartago</option>
@@ -71,12 +71,12 @@
                 </select>
             </div>
             <div class="col-lg-6 col-md-6">
-                <label for="detalles" class="form-label">Dirección</label>
-                <textarea name="detalles" id="detalles" class="form-control" placeholder="Detalles de dirección" style="height: 60px"></textarea>
+                <label for="direccion_exacta" class="form-label">Dirección</label>
+                <textarea name="direccion_exacta" id="direccion_exacta" class="form-control" placeholder="Detalles de dirección" style="height: 60px"></textarea>
             </div>
             <div class="col-lg-6 col-md-6">
-                <label for="estado" class="form-label">Estado</label>
-                <select name="estado" id="estado" class="form-select" aria-label="Selección de tipo de usuario">
+                <label for="estado_fk" class="form-label">Estado</label>
+                <select name="estado_fk" id="estado_fk" class="form-select" aria-label="Selección de tipo de usuario">
                     <option value="1">Disponible</option>
                     <option value="2">No disponible</option>
                 </select>
@@ -86,39 +86,39 @@
                 <input name="precio" id="precio" class="form-control" type="number">
             </div>
             <div class="col-lg-6 col-md-6">
-                <label for="habitaciones" class="form-label">Cantidad de Habitaciones</label>
-                <input name="habitaciones" id="habitaciones" class="form-control" type="number">
+                <label for="cant_habitaciones" class="form-label">Cantidad de Habitaciones</label>
+                <input name="cant_habitaciones" id="cant_habitaciones" class="form-control" type="number">
             </div>
             <div class="col-lg-6 col-md-6">
-                <label for="banios" class="form-label">Cantidad de Baños</label>
-                <input name="banios" id="banios" class="form-control" type="number">
+                <label for="cant_banios" class="form-label">Cantidad de Baños</label>
+                <input name="cant_banios" id="cant_banios" class="form-control" type="number">
             </div>
             <div class="col-lg-6 col-md-6">
-                <label for="vehiculos" class="form-label">Espacio para Vehículos</label>
-                <input name="vehiculos" id="vehiculos" class="form-control" type="number">
+                <label for="cant_vehiculos" class="form-label">Espacio para Vehículos</label>
+                <input name="cant_vehiculos" id="cant_vehiculos" class="form-control" type="number">
             </div>
         </fieldset>
         <fieldset class="row" id="info-vendedor">
             <legend>Información del vendedor <div class="separador"></div>
             </legend>
             <div class="col-lg-6 col-md-6">
-                <label for="idVendedor" class="form-label">ID del vendedor</label>
+                <label for="codigo_vendedor" class="form-label">ID del vendedor</label>
                 <div>
-                    <input name="idVendedor" id="idVendedor" class="form-control" type="number">
+                    <input name="codigo_vendedor" id="codigo_vendedor" class="form-control" type="number">
                     <button id="cambiar-vendedor" data-bs-toggle="modal" data-bs-target="#modal" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Seleccionar vendedor" class="btn btn-azul"><i class="fa-solid fa-address-book"></i></button>
                 </div>
             </div>
             <div class="col-lg-6 col-md-6">
-                <label for="nombreVendedor" class="form-label">Nombre del vendedor</label>
-                <input name="nombreVendedor" id="nombreVendedor" class="form-control" type="number" disabled>
+                <label for="nombre_completo" class="form-label">Nombre del vendedor</label>
+                <input name="nombre_completo" id="nombre_completo" class="form-control" type="number" disabled>
             </div>
             <div class="col-lg-6 col-md-6">
-                <label for="correoVendedor" class="form-label">Correo del vendedor</label>
-                <input name="correoVendedor" id="correoVendedor" class="form-control" type="email" disabled>
+                <label for="correo" class="form-label">Correo del vendedor</label>
+                <input name="correo" id="correo" class="form-control" type="email" disabled>
             </div>
             <div class="col-lg-6 col-md-6">
-                <label for="telefonoVendedor" class="form-label">Teléfono del vendedor</label>
-                <input name="telefonoVendedor" id="telefonoVendedor" class="form-control" type="number" disabled>
+                <label for="telefono" class="form-label">Teléfono del vendedor</label>
+                <input name="telefono" id="telefono" class="form-control" type="number" disabled>
             </div>
         </fieldset>
         <fieldset class="row" id="imagenes">
