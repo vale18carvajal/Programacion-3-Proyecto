@@ -24,7 +24,7 @@
     <div class="vista">
         <h1>Mi perfil</h1>
         <img src="img/Foto-perfil-usuario.jpg" alt="Foto de perfil del usuario">
-        <h3>Nombre de usuario</h3>
+        <h3 id="nombre_usuario">Nombre de usuario</h3>
     </div>
     <div class="separador"></div>
     <div class=" row usuario-info">
@@ -32,36 +32,36 @@
         <br>
         <div class="col-md-12 col-lg-6">
             <label for="cedula" class="form-label">Cédula</label>
-            <input id="cedula" class="form-control" type="text" placeholder="112233445" disabled>
+            <input name="cedula" id="cedula" class="form-control" type="text" placeholder="112233445" disabled>
             <br>
             <label for="nombre" class="form-label">Nombre</label>
-            <input id="nombre" class="form-control" type="text" placeholder="Nombre" disabled>
+            <input name="nombre" id="nombre" class="form-control" type="text" placeholder="Nombre" disabled>
             <br>
             <label for="apellido1" class="form-label">Primer Apellido</label>
-            <input id="apellido1" class="form-control" type="text" placeholder="Apellido1" disabled>
+            <input name="apellido1" id="apellido1" class="form-control" type="text" placeholder="Apellido1" disabled>
             <br>
             <label for="apellido2" class="form-label">Segundo Apellido</label>
-            <input id="apellido2" class="form-control" type="text" placeholder="Apellido2" disabled>
+            <input name="apellido2" id="apellido2" class="form-control" type="text" placeholder="Apellido2" disabled>
             <br>
-            <label for="nacimiento" class="form-label">Fecha de Nacimiento</label>
-            <input id="nacimiento" class="form-control" type="date" disabled>
+            <label for="fecha_nacimiento" class="form-label">Fecha de Nacimiento</label>
+            <input name="fecha_nacimiento" id="fecha_nacimiento" class="form-control" type="date" disabled>
             <br>
         </div>
         <div class="col-md-12 col-lg-6">
             <label for="correo" class="form-label">Correo Electrónico</label>
-            <input id="correo" class="form-control" type="email" placeholder="ejemplo@correo.com" disabled>
+            <input name="correo" id="correo" class="form-control" type="email" placeholder="ejemplo@correo.com" disabled>
             <br>
             <label for="telefono" class="form-label">Número de Teléfono</label>
-            <input id="telefono" class="form-control" type="text" placeholder="88886666" disabled>
+            <input name="telefono" id="telefono" class="form-control" type="text" placeholder="88886666" disabled>
             <br>
-            <label for="usuario" class="form-label">Nombre de Usuario</label>
-            <input id="usuario" class="form-control" type="text" placeholder="Nombre_Usuario33" disabled>
+            <label for="nombre_usuario" class="form-label">Nombre de Usuario</label>
+            <input name="nombre_usuario" id="nombre_usuario" class="form-control" type="text" placeholder="Nombre_Usuario33" disabled>
             <br>
             <label for="clave" class="form-label">Contraseña</label>
-            <input id="clave" class="form-control" type="password" placeholder="••••••••••••••••" disabled>
+            <input name="clave" id="clave" class="form-control" type="password" placeholder="••••••••••••••••" disabled>
             <br>
             <label for="foto" class="form-label">Foto de Usuario</label>
-            <input class="form-control" type="file" id="foto" disabled>
+            <input name="foto" class="form-control" type="file" id="foto" disabled>
         </div>
         <div class="col-md-12 col-lg-12 botones">
             <!-- botones - display: inline -->
