@@ -116,7 +116,7 @@ legend{
     padding: 0 0 10px 0 !important;
 }
 
-#idVendedor,
+#codigo_vendedor,
 .f-adicional{
     width: 80%;
 }
@@ -126,7 +126,7 @@ legend{
     width: 7%;
 }
 
-#idVendedor,
+#codigo_vendedor,
 #cambiar-vendedor,
 .eliminar,
 .f-adicional{
