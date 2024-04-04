@@ -2,7 +2,7 @@
 
 
 
-    <main>
+<main>
     
         <div class="row titulo-centrado d-flex align-items-center">
             <h1 class="col-md-12 col-lg-12 texto-img">Nuestras Propiedades</h1>
@@ -52,148 +52,147 @@
 
     <div class="text-center">
         <!-- Aquí es donde se muestran las propiedades -->
-        <di class="row formulariop mt-5 d-flex justify-content-center">
+        <div class="row formulariop mt-5 d-flex justify-content-center">
+            <h3>Propiedades</h3>
+        
+            <?php
+            $properties = [
+                [
+                    'image' => 'https://hips.hearstapps.com/hmg-prod/images/casa-reformada-decorada-elegante-colores-neutros-tonos-pastel-salon-cocina-abierta-molduras-1669197336.jpg',
+                    'title' => 'Propiedad 1',
+                    'description' => 'Aquí va el texto de la dirección exacta de la propiedad.',
+                ],
+                [
+                    'image' => 'https://hips.hearstapps.com/hmg-prod/images/casa-reformada-decorada-elegante-colores-neutros-tonos-pastel-salon-cocina-abierta-molduras-1669197336.jpg',
+                    'title' => 'Propiedad 2',
+                    'description' => 'Aquí va el texto de la dirección exacta de la propiedad.',
+                ],
+                [
+                    'image' => 'https://hips.hearstapps.com/hmg-prod/images/casa-reformada-decorada-elegante-colores-neutros-tonos-pastel-salon-cocina-abierta-molduras-1669197336.jpg',
+                    'title' => 'Propiedad 3',
+                    'description' => 'Aquí va el texto de la dirección exacta de la propiedad.',
+                ],
+                [
+                    'image' => 'https://hips.hearstapps.com/hmg-prod/images/casa-reformada-decorada-elegante-colores-neutros-tonos-pastel-salon-cocina-abierta-molduras-1669197336.jpg',
+                    'title' => 'Propiedad 4',
+                    'description' => 'Aquí va el texto de la dirección exacta de la propiedad.',
+                ],
+                [
+                    'image' => 'https://hips.hearstapps.com/hmg-prod/images/casa-reformada-decorada-elegante-colores-neutros-tonos-pastel-salon-cocina-abierta-molduras-1669197336.jpg',
+                    'title' => 'Propiedad 5',
+                    'description' => 'Aquí va el texto de la dirección exacta de la propiedad.',
+                ],
+                [
+                    'image' => 'https://hips.hearstapps.com/hmg-prod/images/casa-reformada-decorada-elegante-colores-neutros-tonos-pastel-salon-cocina-abierta-molduras-1669197336.jpg',
+                    'title' => 'Propiedad 6',
+                    'description' => 'Aquí va el texto de la dirección exacta de la propiedad.',
+                ],
+                [
+                    'image' => 'https://hips.hearstapps.com/hmg-prod/images/casa-reformada-decorada-elegante-colores-neutros-tonos-pastel-salon-cocina-abierta-molduras-1669197336.jpg',
+                    'title' => 'Propiedad 7',
+                    'description' => 'Aquí va el texto de la dirección exacta de la propiedad.',
+                ],
+                [
+                    'image' => 'https://hips.hearstapps.com/hmg-prod/images/casa-reformada-decorada-elegante-colores-neutros-tonos-pastel-salon-cocina-abierta-molduras-1669197336.jpg',
+                    'title' => 'Propiedad 8',
+                    'description' => 'Aquí va el texto de la dirección exacta de la propiedad.',
+                ],
+                [
+                    'image' => 'https://hips.hearstapps.com/hmg-prod/images/casa-reformada-decorada-elegante-colores-neutros-tonos-pastel-salon-cocina-abierta-molduras-1669197336.jpg',
+                    'title' => 'Propiedad 9',
+                    'description' => 'Aquí va el texto de la dirección exacta de la propiedad.',
+                ],
+                [
+                    'image' => 'https://hips.hearstapps.com/hmg-prod/images/casa-reformada-decorada-elegante-colores-neutros-tonos-pastel-salon-cocina-abierta-molduras-1669197336.jpg',
+                    'title' => 'Propiedad 10',
+                    'description' => 'Aquí va el texto de la dirección exacta de la propiedad.',
+                ],
+                [
+                    'image' => 'https://hips.hearstapps.com/hmg-prod/images/casa-reformada-decorada-elegante-colores-neutros-tonos-pastel-salon-cocina-abierta-molduras-1669197336.jpg',
+                    'title' => 'Propiedad 11',
+                    'description' => 'Aquí va el texto de la dirección exacta de la propiedad.',
+                ],
+                [
+                    'image' => 'https://hips.hearstapps.com/hmg-prod/images/casa-reformada-decorada-elegante-colores-neutros-tonos-pastel-salon-cocina-abierta-molduras-1669197336.jpg',
+                    'title' => 'Propiedad 12',
+                    'description' => 'Aquí va el texto de la dirección exacta de la propiedad.',
+                ],
+                [
+                    'image' => 'https://hips.hearstapps.com/hmg-prod/images/casa-reformada-decorada-elegante-colores-neutros-tonos-pastel-salon-cocina-abierta-molduras-1669197336.jpg',
+                    'title' => 'Propiedad 13',
+                    'description' => 'Aquí va el texto de la dirección exacta de la propiedad.',
+                ],
+                [
+                    'image' => 'https://hips.hearstapps.com/hmg-prod/images/casa-reformada-decorada-elegante-colores-neutros-tonos-pastel-salon-cocina-abierta-molduras-1669197336.jpg',
+                    'title' => 'Propiedad 14',
+                    'description' => 'Aquí va el texto de la dirección exacta de la propiedad.',
+                ],
+                [
+                    'image' => 'https://hips.hearstapps.com/hmg-prod/images/casa-reformada-decorada-elegante-colores-neutros-tonos-pastel-salon-cocina-abierta-molduras-1669197336.jpg',
+                    'title' => 'Propiedad 15',
+                    'description' => 'Aquí va el texto de la dirección exacta de la propiedad.',
+                ],
+                [
+                    'image' => 'https://hips.hearstapps.com/hmg-prod/images/casa-reformada-decorada-elegante-colores-neutros-tonos-pastel-salon-cocina-abierta-molduras-1669197336.jpg',
+                    'title' => 'Propiedad 16',
+                    'description' => 'Aquí va el texto de la dirección exacta de la propiedad.',
+                ],
+                [
+                    'image' => 'https://hips.hearstapps.com/hmg-prod/images/casa-reformada-decorada-elegante-colores-neutros-tonos-pastel-salon-cocina-abierta-molduras-1669197336.jpg',
+                    'title' => 'Propiedad 17',
+                    'description' => 'Aquí va el texto de la dirección exacta de la propiedad.',
+                ],
+                [
+                    'image' => 'https://hips.hearstapps.com/hmg-prod/images/casa-reformada-decorada-elegante-colores-neutros-tonos-pastel-salon-cocina-abierta-molduras-1669197336.jpg',
+                    'title' => 'Propiedad 18',
+                    'description' => 'Aquí va el texto de la dirección exacta de la propiedad.',
+                ],
+                [
+                    'image' => 'https://hips.hearstapps.com/hmg-prod/images/casa-reformada-decorada-elegante-colores-neutros-tonos-pastel-salon-cocina-abierta-molduras-1669197336.jpg',
+                    'title' => 'Propiedad 19',
+                    'description' => 'Aquí va el texto de la dirección exacta de la propiedad.',
+                ],
+                [
+                    'image' => 'https://hips.hearstapps.com/hmg-prod/images/casa-reformada-decorada-elegante-colores-neutros-tonos-pastel-salon-cocina-abierta-molduras-1669197336.jpg',
+                    'title' => 'Propiedad 20',
+                    'description' => 'Aquí va el texto de la dirección exacta de la propiedad.',
+                ],
+            ];
             
-        <h3>Propiedades</h3>
-    
-    <?php
-    $properties = [
-        [
-            'image' => 'https://hips.hearstapps.com/hmg-prod/images/casa-reformada-decorada-elegante-colores-neutros-tonos-pastel-salon-cocina-abierta-molduras-1669197336.jpg',
-            'title' => 'Propiedad 1',
-            'description' => 'Aquí va el texto de la dirección exacta de la propiedad.',
-        ],
-        [
-            'image' => 'https://hips.hearstapps.com/hmg-prod/images/casa-reformada-decorada-elegante-colores-neutros-tonos-pastel-salon-cocina-abierta-molduras-1669197336.jpg',
-            'title' => 'Propiedad 2',
-            'description' => 'Aquí va el texto de la dirección exacta de la propiedad.',
-        ],
-        [
-            'image' => 'https://hips.hearstapps.com/hmg-prod/images/casa-reformada-decorada-elegante-colores-neutros-tonos-pastel-salon-cocina-abierta-molduras-1669197336.jpg',
-            'title' => 'Propiedad 3',
-            'description' => 'Aquí va el texto de la dirección exacta de la propiedad.',
-        ],
-        [
-            'image' => 'https://hips.hearstapps.com/hmg-prod/images/casa-reformada-decorada-elegante-colores-neutros-tonos-pastel-salon-cocina-abierta-molduras-1669197336.jpg',
-            'title' => 'Propiedad 4',
-            'description' => 'Aquí va el texto de la dirección exacta de la propiedad.',
-        ],
-        [
-            'image' => 'https://hips.hearstapps.com/hmg-prod/images/casa-reformada-decorada-elegante-colores-neutros-tonos-pastel-salon-cocina-abierta-molduras-1669197336.jpg',
-            'title' => 'Propiedad 5',
-            'description' => 'Aquí va el texto de la dirección exacta de la propiedad.',
-        ],
-        [
-            'image' => 'https://hips.hearstapps.com/hmg-prod/images/casa-reformada-decorada-elegante-colores-neutros-tonos-pastel-salon-cocina-abierta-molduras-1669197336.jpg',
-            'title' => 'Propiedad 6',
-            'description' => 'Aquí va el texto de la dirección exacta de la propiedad.',
-        ],
-        [
-            'image' => 'https://hips.hearstapps.com/hmg-prod/images/casa-reformada-decorada-elegante-colores-neutros-tonos-pastel-salon-cocina-abierta-molduras-1669197336.jpg',
-            'title' => 'Propiedad 7',
-            'description' => 'Aquí va el texto de la dirección exacta de la propiedad.',
-        ],
-        [
-            'image' => 'https://hips.hearstapps.com/hmg-prod/images/casa-reformada-decorada-elegante-colores-neutros-tonos-pastel-salon-cocina-abierta-molduras-1669197336.jpg',
-            'title' => 'Propiedad 8',
-            'description' => 'Aquí va el texto de la dirección exacta de la propiedad.',
-        ],
-        [
-            'image' => 'https://hips.hearstapps.com/hmg-prod/images/casa-reformada-decorada-elegante-colores-neutros-tonos-pastel-salon-cocina-abierta-molduras-1669197336.jpg',
-            'title' => 'Propiedad 9',
-            'description' => 'Aquí va el texto de la dirección exacta de la propiedad.',
-        ],
-        [
-            'image' => 'https://hips.hearstapps.com/hmg-prod/images/casa-reformada-decorada-elegante-colores-neutros-tonos-pastel-salon-cocina-abierta-molduras-1669197336.jpg',
-            'title' => 'Propiedad 10',
-            'description' => 'Aquí va el texto de la dirección exacta de la propiedad.',
-        ],
-        [
-            'image' => 'https://hips.hearstapps.com/hmg-prod/images/casa-reformada-decorada-elegante-colores-neutros-tonos-pastel-salon-cocina-abierta-molduras-1669197336.jpg',
-            'title' => 'Propiedad 11',
-            'description' => 'Aquí va el texto de la dirección exacta de la propiedad.',
-        ],
-        [
-            'image' => 'https://hips.hearstapps.com/hmg-prod/images/casa-reformada-decorada-elegante-colores-neutros-tonos-pastel-salon-cocina-abierta-molduras-1669197336.jpg',
-            'title' => 'Propiedad 12',
-            'description' => 'Aquí va el texto de la dirección exacta de la propiedad.',
-        ],
-        [
-            'image' => 'https://hips.hearstapps.com/hmg-prod/images/casa-reformada-decorada-elegante-colores-neutros-tonos-pastel-salon-cocina-abierta-molduras-1669197336.jpg',
-            'title' => 'Propiedad 13',
-            'description' => 'Aquí va el texto de la dirección exacta de la propiedad.',
-        ],
-        [
-            'image' => 'https://hips.hearstapps.com/hmg-prod/images/casa-reformada-decorada-elegante-colores-neutros-tonos-pastel-salon-cocina-abierta-molduras-1669197336.jpg',
-            'title' => 'Propiedad 14',
-            'description' => 'Aquí va el texto de la dirección exacta de la propiedad.',
-        ],
-        [
-            'image' => 'https://hips.hearstapps.com/hmg-prod/images/casa-reformada-decorada-elegante-colores-neutros-tonos-pastel-salon-cocina-abierta-molduras-1669197336.jpg',
-            'title' => 'Propiedad 15',
-            'description' => 'Aquí va el texto de la dirección exacta de la propiedad.',
-        ],
-        [
-            'image' => 'https://hips.hearstapps.com/hmg-prod/images/casa-reformada-decorada-elegante-colores-neutros-tonos-pastel-salon-cocina-abierta-molduras-1669197336.jpg',
-            'title' => 'Propiedad 16',
-            'description' => 'Aquí va el texto de la dirección exacta de la propiedad.',
-        ],
-        [
-            'image' => 'https://hips.hearstapps.com/hmg-prod/images/casa-reformada-decorada-elegante-colores-neutros-tonos-pastel-salon-cocina-abierta-molduras-1669197336.jpg',
-            'title' => 'Propiedad 17',
-            'description' => 'Aquí va el texto de la dirección exacta de la propiedad.',
-        ],
-        [
-            'image' => 'https://hips.hearstapps.com/hmg-prod/images/casa-reformada-decorada-elegante-colores-neutros-tonos-pastel-salon-cocina-abierta-molduras-1669197336.jpg',
-            'title' => 'Propiedad 18',
-            'description' => 'Aquí va el texto de la dirección exacta de la propiedad.',
-        ],
-        [
-            'image' => 'https://hips.hearstapps.com/hmg-prod/images/casa-reformada-decorada-elegante-colores-neutros-tonos-pastel-salon-cocina-abierta-molduras-1669197336.jpg',
-            'title' => 'Propiedad 19',
-            'description' => 'Aquí va el texto de la dirección exacta de la propiedad.',
-        ],
-        [
-            'image' => 'https://hips.hearstapps.com/hmg-prod/images/casa-reformada-decorada-elegante-colores-neutros-tonos-pastel-salon-cocina-abierta-molduras-1669197336.jpg',
-            'title' => 'Propiedad 20',
-            'description' => 'Aquí va el texto de la dirección exacta de la propiedad.',
-        ],
-    ];
-    
-            
-            // Obtener el número de página actual
-            $currentPage = isset($_GET['page']) ? $_GET['page'] : 1;
+                    
+                    // Obtener el número de página actual
+                    $currentPage = isset($_GET['page']) ? $_GET['page'] : 1;
 
-            // Calcular el índice de inicio y fin para el subconjunto de propiedades
-            $startIndex = ($currentPage - 1) * 10;
-            $endIndex = $startIndex + 10;
+                    // Calcular el índice de inicio y fin para el subconjunto de propiedades
+                    $startIndex = ($currentPage - 1) * 10;
+                    $endIndex = $startIndex + 10;
 
-            // Obtener el subconjunto de propiedades para la página actual
-            $propertiesPerPage = array_slice($properties, $startIndex, 10);
-            foreach ($propertiesPerPage as $property): ?>
-                    <div class="card1 col-6 border" style="width: 18rem;">
-                        <img class="mt-0" src="<?php echo $property['image']; ?>" class="card-img-top" alt="...">
-                        <div class="card-body">
-                            <h5 class="card-title"><?php echo $property['title']; ?></h5>
-                            <p class="card-text"><?php echo $property['description']; ?></p>
-                            <a href="#" class="btn btn-azul" data-toggle="modal" data-target="#propertyModal<?php echo $index; ?>">Ver detalles</a>   
+                    // Obtener el subconjunto de propiedades para la página actual
+                    $propertiesPerPage = array_slice($properties, $startIndex, 10);
+                    foreach ($propertiesPerPage as $property): ?>
+                            <div class="card1 col-6 border" style="width: 18rem;">
+                                <img class="mt-0" src="<?php echo $property['image']; ?>" class="card-img-top" alt="...">
+                                <div class="card-body">
+                                    <h5 class="card-title"><?php echo $property['title']; ?></h5>
+                                    <p class="card-text"><?php echo $property['description']; ?></p>
+                                    <a href="#" class="btn btn-azul" data-toggle="modal" data-target="#propertyModal<?php echo $index; ?>">Ver detalles</a>   
+                                </div>
+                            </div>
+                        <?php endforeach; ?>
+
+                        <div class="col-md-12 paginas">    
+                            <?php for ($i = 1; $i <= 5; $i++): ?>
+                                <a class="btn btn-azul" href="inmuebles.php?page=<?php echo $i; ?>"><?php echo $i; ?></a>
+                            <?php endfor; ?>    
                         </div>
-                    </div>
-                <?php endforeach; ?>
-
-                <div class="col-md-12 paginas">    
-                    <?php for ($i = 1; $i <= 5; $i++): ?>
-                        <a class="btn btn-azul" href="inmueble.php?page=<?php echo $i; ?>"><?php echo $i; ?></a>
-                    <?php endfor; ?>    
-                </div>
             
             
             
-    
+        </div>
         
     </div>
     
         
-    </main>
+</main>
 
     <?php include "shared/footer.php" ?>

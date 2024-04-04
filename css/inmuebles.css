@@ -39,14 +39,14 @@ li{
 .formulariop {
     margin: 35px auto;
     width: 70%;
-    padding:20px 45px auto;
+    padding:20px 45px;
     border: 1px solid var(--celeste);
     border-radius: 10px;
     -webkit-border-radius: 10px;
     -moz-border-radius: 10px;
     -ms-border-radius: 10px;
     -o-border-radius: 10px;
-}
+}--
 
 .opciones {
     display: flex;
