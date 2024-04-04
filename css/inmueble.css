@@ -1,33 +1,106 @@
 @import url(shared.css);
 
-:root{
-    /* Paleta de colores */
---Azul-oscuro-1 : #023059; 
---Azul-oscuro-2: #0D518C; 
---Azul: #1C71A6; 
---celeste: #9AC7D9;
---texto-color-oscuro:#0D0D0D;
---texto-color-claro: #F1F1F4;
-
-/*Fuente*/
---fuente: Tahoma;
---texto-color: 
+@keyframes fadeIn {
+    0% {opacity: 0;}
+    100% {opacity: 1;}
 }
 
-.tamaño img{
-    width: 500px;
-    height: 400px;
-    border-radius: 25px;
-    -webkit-border-radius: 25px;
-    -moz-border-radius: 25px;
-    -ms-border-radius: 25px;
-    -o-border-radius: 25px;
+.fade-in {
+    animation: fadeIn 1s ease-in-out;
 }
 
-.tamaño{
-    width: 500px !important;
-    height: 400px !important;
-    margin: 0 auto !important;
-    margin-top: 20px !important;
-    margin-bottom: 20px !important;
+li{
+    margin-right: 25px;
+}
+
+.titulo-centrado {
+    height: 300px;
+    
+}
+
+
+.texto-img {
+    text-align: center;
+    font-size: 500%;
+    color: var(--Azul-oscuro-2);  
+}
+.formulario1 {
+    margin: 10px auto;
+    width: 70%;
+    padding: 10px 40px;
+    border: 1px solid var(--celeste);
+    border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
+}
+
+.formulariop {
+    margin: 35px auto;
+    width: 70%;
+    padding:20px 45px;
+    border: 1px solid var(--celeste);
+    border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
+}
+
+.opciones {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    text-align: center;
+}
+
+.opciones > div {
+    flex: 1 0 20%; /* Esto significa que cada div ocupará al menos el 20% del ancho total, pero puede crecer si hay espacio disponible */
+    margin: 10px;
+}
+
+.opciones label {
+    display: block;
+}
+
+.opciones select, .opciones input {
+    width: 100%;
+    margin-top: 5px;
+}
+
+select{
+    margin: 10px 0;
+    width: 70% !important;
+    margin: 10px auto !important;
+}
+
+.card1 {
+    padding: 10px !important;
+    margin: 8px;
+    transition: transform 0.3s ease-in-out;
+}
+
+.card:hover {
+    transform: scale(1.05);
+}
+
+.container1 {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.mt-0 {
+    width: 80%; /* Esto hará que la imagen tome todo el ancho de la tarjeta, pero no más */
+    height: auto; /* Esto mantendrá la proporción de la imagen */
+}
+
+.btnfiltro {
+    width: 200px;  
+    height: 50px;
+    margin: 100px;  
+    background-color: var(--Azul-oscuro-1);
+    color: var(--texto-color-claro);
+    border-color: var(--Azul-oscuro-1);
 }
