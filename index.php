@@ -15,7 +15,7 @@
       </div> 
   </div>
   <!-- Temporal -->
-  <button class="btn btn-azul"> <a href="inmuebles.php">Todas las propiedades</a></button>
+  <button class="btn btn-azul"> <a href="inmueble.php">Todas las propiedades</a></button>
 
   <div class="row formulario mt-5">
     <div>
