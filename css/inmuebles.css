@@ -39,7 +39,7 @@ li{
 .formulariop {
     margin: 35px auto;
     width: 70%;
-    padding:20px 45px;
+    padding:20px 45px auto;
     border: 1px solid var(--celeste);
     border-radius: 10px;
     -webkit-border-radius: 10px;

@@ -52,7 +52,7 @@
 
     <div class="text-center">
         <!-- Aquí es donde se muestran las propiedades -->
-        <di class="row formulariop mt-5">
+        <di class="row formulariop mt-5 d-flex justify-content-center">
             
         <h3>Propiedades</h3>
     
