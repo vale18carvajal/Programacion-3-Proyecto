@@ -96,9 +96,8 @@ return function (App $app) {
 
         //Consula sql
         $sql = "SELECT u.cedula, u.nombre, u.apellido1, u.apellido2, u.fecha_nacimiento, u.correo, u.telefono, u.nombre_usuario, 
-                u.foto_perfil, r.descripcion_usuario, u.bloqueado
+                u.foto_perfil, u.rol_fk, u.bloqueado
                 FROM usuario u
-                JOIN rol_usuario r ON r.codigo_usuario = u.rol_fk
                 WHERE u.nombre_usuario='$usuario'";
 
         //Ejecutar la consulta en modo fetch
@@ -176,7 +175,21 @@ return function (App $app) {
     //Buscar vendedores por nombres o apellidos
     $app->get('/buscar-vendedor/{idVendedor}', function (Request $request, Response $response, array $args) {
         $idVendedor = $args["idVendedor"];
-        $response->getBody()->write("Se busca el vendedor: $idVendedor");
+        //Realizar conexion
+        $db = conectar();
+
+        //Cambiar a modo fetch
+        $db->SetFetchMode(ADODB_FETCH_ASSOC);
+
+        //Consula sql
+        $sql = "SELECT codigo_vendedor, CONCAT(nombre,' ',apellido1, ' ',apellido2) AS nombre_completo, correo, telefono
+        FROM vendedor
+        WHERE codigo_vendedor='$idVendedor'";
+
+        //Ejecutar la consulta en modo fetch
+        $res = $db->GetAll($sql);
+
+        $response->getBody()->write(json_encode($res[0]));
         return $response;
     });
 
@@ -256,13 +269,10 @@ return function (App $app) {
         $db->SetFetchMode(ADODB_FETCH_ASSOC);
 
         //Consula sql
-        $sql = "SELECT i.id, i.nombre_inmueble, t.descripcion_tipo, p.nombre_provincia, i.direccion_exacta, 
-        e.descripcion_estado, i.precio, i.cant_habitaciones, i.cant_banios, i.cant_vehiculos, i.codigo_vendedor, 
+        $sql = "SELECT i.id, i.nombre_inmueble, i.tipo_inmueble_fk, i.provincia_fk, i.direccion_exacta, 
+        i.estado_fk, i.precio, i.cant_habitaciones, i.cant_banios, i.cant_vehiculos, i.codigo_vendedor, 
         CONCAT(v.nombre,' ', v.apellido1, ' ', v.apellido2) AS nombre_completo, v.correo, v.telefono
         FROM inmueble i
-        JOIN tipo_inmueble t ON t.codigo_tipo = i.tipo_inmueble_fk
-        JOIN provincia p ON p.codigo_provincia = i.provincia_fk
-        JOIN estado e ON e.codigo_estado = i.estado_fk
         JOIN vendedor v ON v.codigo_vendedor = i.codigo_vendedor
         WHERE i.id='$idInmueble'";
 
