@@ -1,5 +1,9 @@
 @import url(shared.css);
 
+main{
+    margin: 0 25px !important;
+}
+
 h1{
     text-align: center;
     color: var(--Azul-oscuro-2);

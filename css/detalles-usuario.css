@@ -1,11 +1,5 @@
 @import url(shared.css);
-/* body{
-    background-color: var(--texto-color-claro);
-} */
 
-/* .contenedor{
-    display: inline-flex;
-} */
 
 h2{
     text-align: center;
@@ -13,10 +7,11 @@ h2{
     margin: 40px 0;
     font-weight: bold;
 }
+.regresar{
+    width: 70vw;
+    margin: 0 auto 20px auto;
+}
 
-/* h4{
-    margin-bottom: 30px;
-} */
 
 .info-usuario{
     background-color:  var(--texto-color-claro);
@@ -34,6 +29,7 @@ h2{
 .foto{
     display: inline-flex;
 }
+
 .foto h4{
     display: flex;
     align-items: center;
@@ -41,12 +37,7 @@ h2{
     margin-left: 20px;
 }
 
-/* .foto-perfil{
-    width: 50%;
-    margin: 0 auto;
-} */
-
-#foto-perfil{
+#foto{
     width: 150px;
     height: 150px;
     object-fit: cover;
@@ -59,27 +50,15 @@ h2{
     -o-border-radius: 150px;
 }
 
-/* label{
-    width: 20%;
-    min-width: 50px;
-    text-align: right;
-    
-}
-input, select{
-    width: 75% !important;
-    text-align: left !important;
-    
-} */
-
-/* label, input, select{
-    display: inline-block !important;
-    margin-bottom: 20px ;
-} */
-
 #guardar,
 #cancelar{
     display: block;
     margin: 0 auto;
     margin-bottom: 10px;
     width: 30%;
+}
+
+.error{
+    color: var(--error);
+    font-style: italic;
 }

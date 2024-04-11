@@ -1,4 +1,5 @@
 cargarTabla();
+sessionStorage.setItem("username", null);
 
 document.querySelector("tbody").addEventListener("click", (e) => {
     if (e.target.classList.contains("editar")) {
@@ -55,8 +56,8 @@ function crearFilas(dato) {
             <td>${bloq}</td>
             <td>${dato.fecha_creacion}</td>
             <td>
-                <img class="boton-crud editar" src="img/icono-editar.png" alt="botón para editar">
-                <img class="boton-crud eliminar" src="img/icono-eliminar.png" alt="botón para eliminar">
+                <img data-bs-toggle="tooltip" data-bs-placement="bottom" title="Editar usuario" class="boton-crud editar" src="img/icono-editar.png" alt="botón para editar">
+                <img data-bs-toggle="tooltip" data-bs-placement="bottom" title="Eliminar usuario" class="boton-crud eliminar" src="img/icono-eliminar.png" alt="botón para eliminar">
             </td>
         </tr>
     

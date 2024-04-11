@@ -1,14 +1,91 @@
 let OPC= -1;
-if (sessionStorage.getItem("username") != "null") {
+if (sessionStorage.getItem("username") !== 'null') {
+    console.log("hola");
     let username = sessionStorage.getItem("username");
     cargarCampos(username);
     OPC = 1;
     deshabilitar();
 } 
+//Validaciones
+let validacionCampos = $(".info-usuario").validate({
+    rules: {
+        cedula: {
+            required: true,
+            number: true,
+            rangelength: [9, 9]
+        },
+        nombre: {
+            required: true
+        },
+        apellido1: {
+            required: true
+        },
+        apellido2: {
+            required: true
+        },
+        fecha_nacimiento: {
+            required: true
+        },
+        correo: {
+            required: true,
+            email: true
+        },
+        telefono: {
+            required: true,
+            number: true,
+            rangelength: [8, 8]
+        },
+        nombre_usuario: {
+            required: true
+        },
+        rol_fk:{
+            min: 1
+        }
+    },
+    messages: {
+        cedula: {
+            required: `<i class="fa-solid fa-circle-exclamation"></i> Este campo es obligatorio`,
+            number: `<i class="fa-solid fa-circle-exclamation"></i> Debe ingresar solo valores numéricos`,
+            rangelength: `<i class="fa-solid fa-circle-exclamation"></i> La cédula debe tener nueve dígitos`
+        },
+        nombre: {
+            required: `<i class="fa-solid fa-circle-exclamation"></i> Este campo es obligatorio`
+        },
+        apellido1: {
+            required: `<i class="fa-solid fa-circle-exclamation"></i> Este campo es obligatorio`
+        },
+        apellido2: {
+            required: `<i class="fa-solid fa-circle-exclamation"></i> Este campo es obligatorio`
+        },
+        fecha_nacimiento: {
+            required: `<i class="fa-solid fa-circle-exclamation"></i> Este campo es obligatorio`
+        },
+        correo: {
+            required: `<i class="fa-solid fa-circle-exclamation"></i> Este campo es obligatorio`,
+            email: `<i class="fa-solid fa-circle-exclamation"></i> Debe introducir una dirección de correo válida`
+        },
+        telefono: {
+            required: `<i class="fa-solid fa-circle-exclamation"></i> Este campo es obligatorio`,
+            number: `<i class="fa-solid fa-circle-exclamation"></i> Debe ingresar solo números`,
+            rangelength: `<i class="fa-solid fa-circle-exclamation"></i> Debe ingresar ocho dígitos`
+        },
+        nombre_usuario: {
+            required: `<i class="fa-solid fa-circle-exclamation"></i> Este campo es obligatorio`
+        },
+        rol_fk:{
+            min: `<i class="fa-solid fa-circle-exclamation"></i> Debe seleccionar un tipo de usuario`
+        },
+        bloqueado:{
+            min: `<i class="fa-solid fa-circle-exclamation"></i> Debe indicar el estado del usuario`
+        }
+    }
+});
 
 $("#guardar").click(function (e) {
-    e.preventDefault();
-    guardar();
+    // e.preventDefault();
+    if (validacionCampos.form()) {
+        guardar();
+    }
 });
 
 $("#regresar").click(function (e) {
