@@ -24,11 +24,12 @@
 <!-- JQuery y validaciones -->
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
 <?php
-if ($url == "inicio-sesion" || $url == "contactenos") {
+if ($url == "inicio-sesion" || $url == "contactenos" || $url == "detalles-usuario" || $url == "detalles-propiedad") {
   echo '<script src="https://cdn.jsdelivr.net/npm/jquery-validation@1.19.5/dist/jquery.validate.min.js"></script>';
 }
 ?>
 <script src="js/<?php echo $url ?>.js"></script>
+<script src="js/header.js"></script>
 <!-- Para iconos -->
 <script src="https://kit.fontawesome.com/97cef9f55a.js" crossorigin="anonymous"></script>
 <!-- Para alertas -->
