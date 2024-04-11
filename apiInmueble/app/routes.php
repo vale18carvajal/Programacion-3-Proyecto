@@ -285,6 +285,65 @@ return function (App $app) {
         return $response;
     });
 
+        //Busar inmuebles por filtros
+        $app->get('/inmuebledis', function (Request $request, Response $response) {
+            //Realizar conexion
+            $db = conectar();
+            $queryParams = $request->getQueryParams();
+    
+            $tipoInmueble = $queryParams["tipoInmueble"] ?? "";
+            $ubicacion = $queryParams["ubicacion"] ?? "";
+            $precio = $queryParams["precio"] ?? "";
+    
+            $precioMin = null;
+            $precioMax = null;
+    
+            switch ($precio) {
+                case "-50":
+                    $precioMin = -1;
+                    $precioMax = 50000000;
+                    break;
+                case "50-100":
+                    $precioMin = 50000000;
+                    $precioMax = 100000000;
+                    break;
+                case "100-150":
+                    $precioMin = 100000000;
+                    $precioMax = 150000000;
+                    break;
+                case "150+":
+                    $precioMin = 150000000;
+                    $precioMax = 999999999;
+                    break;
+                default:
+                    $precioMin = -1;
+                    $precioMax = 999999999;
+                    break;
+            };
+    
+            //Cambiar a modo fetch
+            $db->SetFetchMode(ADODB_FETCH_ASSOC);
+    
+            //Consula sql
+            $sql = "SELECT i.id, i.nombre_inmueble, e.descripcion_estado, i.codigo_vendedor, i.direccion_exacta
+            FROM inmueble i
+            JOIN estado e ON e.codigo_estado = i.estado_fk
+            JOIN tipo_inmueble ti ON ti.codigo_tipo = i.tipo_inmueble_fk
+            JOIN provincia p ON p.codigo_provincia = i.provincia_fk
+            WHERE (upper(ti.descripcion_tipo) = upper('{$tipoInmueble}') OR '{$tipoInmueble}' = '')
+                AND (upper(p.nombre_provincia) = upper('{$ubicacion}') OR '{$ubicacion}' = '')
+                AND (i.precio >= {$precioMin} AND i.precio < {$precioMax})
+                AND i.estado_fk = 1 -- Estado DISPONIBLE
+            ";
+    
+            //Ejecutar la consulta en modo fetch
+            $res = $db->GetAll($sql);
+    
+            $response->getBody()->write(json_encode($res));
+            return $response->withHeader('Content-Type','application/json');
+        });
+
+        
     //Buscar inmuebles por id
     $app->get('/inmueble/{idInmueble}', function (Request $request, Response $response, array $args) {
         $idInmueble = $args["idInmueble"];
