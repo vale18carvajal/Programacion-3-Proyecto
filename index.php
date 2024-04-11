@@ -14,9 +14,6 @@
         <img src="img/icono-casa.png">
       </div> 
   </div>
-  <!-- Temporal -->
-  <button class="btn btn-azul"> <a href="inmueble.php">Todas las propiedades</a></button>
-
   <div class="row formulario mt-5">
     <div>
       <h3>Búsqueda</h3>
@@ -36,9 +33,9 @@
         <label for="rango"><strong>Rango de precio</strong></label>
         <select class="form-select col-md-6 col-lg-6" aria-label="Rango de precios">
           <option selected>Seleccionar</option>
-          <option value="50-100">¢50 000 000 a ¢100 000 000</option>
-          <option value="100-150">¢100 000 000 a ¢150 000 000</option>
-          <option value="150+">¢150 000 000 y más</option>
+          <option value="1">USD $70 000 a USD $195 000</option>
+          <option value="2">USD $195 000 a  USD $395 000</option>
+          <option value="3">Más de USD $395 000</option>
         </select>
       </div>
       <div class="col-md-6 col-lg-6">
@@ -76,7 +73,7 @@
       <div class="card-body">
         <h5 class="card-title">Nombre Propiedad</h5>
         <p class="card-text">Aquí va el texto de la dirección exacta de la propiedad.</p>
-        <a href="#" class="btn btn-azul">Ver detalles</a>
+        <a href="detalle-inmueble.php" class="btn btn-azul">Ver detalles</a>
       </div>
     </div>
     <div class="card col-md-4 col-lg-3 col-sm-12" style="width: 18rem;">
@@ -84,7 +81,7 @@
       <div class="card-body">
         <h5 class="card-title">Nombre Propiedad</h5>
         <p class="card-text">Aquí va el texto de la dirección exacta de la propiedad.</p>
-        <a href="#" class="btn btn-azul">Ver detalles</a>
+        <a href="detalle-inmueble.php" class="btn btn-azul">Ver detalles</a>
       </div>
     </div>
     <div class="card col-md-4 col-lg-3 col-sm-12" style="width: 18rem;">
@@ -92,7 +89,7 @@
       <div class="card-body">
         <h5 class="card-title">Nombre Propiedad</h5>
         <p class="card-text">Aquí va el texto de la dirección exacta de la propiedad.</p>
-        <a href="#" class="btn btn-azul">Ver detalles</a>
+        <a href="detalle-inmueble.php" class="btn btn-azul">Ver detalles</a>
       </div>
     </div>
     <div class="card col-md-4 col-lg-3 col-sm-12" style="width: 18rem;">
@@ -100,7 +97,7 @@
       <div class="card-body">
         <h5 class="card-title">Nombre Propiedad</h5>
         <p class="card-text">Aquí va el texto de la dirección exacta de la propiedad.</p>
-        <a href="#" class="btn btn-azul">Ver detalles</a>
+        <a href="detalle-inmueble.php" class="btn btn-azul">Ver detalles</a>
       </div>
     </div>
     <div class="card col-md-4 col-lg-3 col-sm-12" style="width: 18rem;">
@@ -108,7 +105,7 @@
       <div class="card-body">
         <h5 class="card-title">Nombre Propiedad</h5>
         <p class="card-text">Aquí va el texto de la dirección exacta de la propiedad.</p>
-        <a href="#" class="btn btn-azul">Ver detalles</a>
+        <a href="detalle-inmueble.php" class="btn btn-azul">Ver detalles</a>
       </div>
     </div>
     <div class="card col-md-4 col-lg-3 col-sm-12" style="width: 18rem;">
@@ -116,7 +113,7 @@
       <div class="card-body">
         <h5 class="card-title">Nombre Propiedad</h5>
         <p class="card-text">Aquí va el texto de la dirección exacta de la propiedad.</p>
-        <a href="#" class="btn btn-azul">Ver detalles</a>
+        <a href="detalle-inmueble.php" class="btn btn-azul">Ver detalles</a>
       </div>
     </div>
     <div class="card col-md-4 col-lg-3 col-sm-12" style="width: 18rem;">
@@ -124,7 +121,7 @@
       <div class="card-body">
         <h5 class="card-title">Nombre Propiedad</h5>
         <p class="card-text">Aquí va el texto de la dirección exacta de la propiedad.</p>
-        <a href="#" class="btn btn-azul">Ver detalles</a>
+        <a href="detalle-inmueble.php" class="btn btn-azul">Ver detalles</a>
       </div>
     </div>
     <div class="card col-md-4 col-lg-3 col-sm-12" style="width: 18rem;">
@@ -132,7 +129,7 @@
       <div class="card-body">
         <h5 class="card-title">Nombre Propiedad</h5>
         <p class="card-text">Aquí va el texto de la dirección exacta de la propiedad.</p>
-        <a href="#" class="btn btn-azul">Ver detalles</a>
+        <a href="detalle-inmueble.php" class="btn btn-azul">Ver detalles</a>
       </div>
     </div>
     <div class="card col-md-4 col-lg-3 col-sm-12" style="width: 18rem;">
@@ -140,7 +137,7 @@
       <div class="card-body">
         <h5 class="card-title">Nombre Propiedad</h5>
         <p class="card-text">Aquí va el texto de la dirección exacta de la propiedad.</p>
-        <a href="#" class="btn btn-azul">Ver detalles</a>
+        <a href="detalle-inmueble.php" class="btn btn-azul">Ver detalles</a>
       </div>
     </div>
     <div class="card col-md-4 col-lg-3 col-sm-12" style="width: 18rem;">
@@ -148,7 +145,7 @@
       <div class="card-body">
         <h5 class="card-title">Nombre Propiedad</h5>
         <p class="card-text">Aquí va el texto de la dirección exacta de la propiedad.</p>
-        <a href="#" class="btn btn-azul">Ver detalles</a>
+        <a href="detalle-inmueble.php" class="btn btn-azul">Ver detalles</a>
       </div>
     </div>
   </div>
