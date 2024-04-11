@@ -1,0 +1,42 @@
+@import url(shared.css);
+
+h1,
+h3{
+    font-weight: bold;
+    color: var(--Azul-oscuro-2);
+}
+.fotos{
+    width: 45%;
+    display: block;
+    margin: auto;
+}
+
+main,
+.fotos,
+.info,
+.contenedor{
+    margin-top: 45px !important;
+}
+
+.info{
+padding:0 100px 100px 100px;
+}
+
+
+.qr{
+    background-color: black;
+    display: block;
+    margin: auto;
+    width: 250px;
+    height: 250px;
+}
+
+i{
+    margin-right: 7px;
+}
+
+.accordion-button:active,
+.accordion-button[aria-expanded="true"] {
+    background: linear-gradient(var(--Azul-oscuro-1), var(--Azul-oscuro-2)) !important;
+    color: var(--texto-color-claro) !important;
+  }
