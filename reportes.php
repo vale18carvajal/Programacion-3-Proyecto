@@ -51,12 +51,12 @@
     <div class="h">
         <h3>Visualización de Reportes</h3>
         <button id="btn-pdf" class="btn btn-azul">Generar Reporte en PDF</button>
-        <p id="mensaje"><br>No hay reporte disponible.</p>
+        <p id="mensaje"><br>No hay reporte.<br><i class="fa-solid fa-eye-slash"></i></p>
 
         <!-- tabla de reportes -->
 
-        <table class="table table-striped">
-            <!-- <thead>
+        <table class="table table-striped text-center" hidden>
+            <thead>
                 <tr>
                     <th scope="col">ID</th>
                     <th scope="col">TIPO</th>
@@ -66,28 +66,8 @@
                 </tr>
             </thead>
             <tbody>
-                <tr>
-                    <th scope="row">1</th>
-                    <td>Apartamento</td>
-                    <td>San José</td>
-                    <td>No disponible</td>
-                    <td>23472</td>
-                </tr>
-                <tr>
-                    <th scope="row">2</th>
-                    <td>Casa</td>
-                    <td>Guanacaste</td>
-                    <td>Disponible</td>
-                    <td>84745</td>
-                </tr>
-                <tr>
-                    <th scope="row">3</th>
-                    <td>Terreno</td>
-                    <td>Cartago</td>
-                    <td>Disponible</td>
-                    <td>57923</td>
-                </tr>
-            </tbody> -->
+                <!-- Se muestran datos de forma dinámica -->
+            </tbody>
         </table>
     </div>
 </div>
