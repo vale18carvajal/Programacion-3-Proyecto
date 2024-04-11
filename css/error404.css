@@ -1,2 +1,31 @@
-@import url("shared.css");
+@import url(shared.css);
 
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    /* background-color:yellow; */
+}
+
+.contenedor{
+    margin: auto;
+    /* background-color: blue; */
+    width: 60vw;
+    max-width: 600px;
+    min-width: 300px;
+    justify-content: center;
+}
+
+img{
+    width: 100%;
+    margin: 0 auto;
+}
+ a{
+   text-align: center;
+}
+
+button{
+    margin-top: 40px;
+    width: 100%;
+} 
