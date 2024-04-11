@@ -1,6 +1,6 @@
 <?php include "shared/header.php" ?>
 <main>
-    <a href="CRUD-propiedades.php"><button id="regresar" class="btn btn-azul"><i class="fa-solid fa-arrow-left"></i> Regresar</button></a>
+    <button id="regresar" class="btn btn-azul"><i class="fa-solid fa-arrow-left"></i> Regresar</button>
     <h1>Detalles de la Propiedad</h1>
 
     <div id="vistaPrevia">
@@ -36,11 +36,11 @@
         </div>
         <a href="#imagenes"><button type="button" id="agregar-img" class="btn btn-azul">Añadir imagen</button></a>
     </div>
-    <div class="datos-propiedad justify-content-center">
+    <form class="datos-propiedad justify-content-center">
         <fieldset class="row" id="info-propiedad">
             <legend>Información general del la propiedad<div class="separador"></div>
             </legend>
-            <div class=" col-lg-6 col-md-6">
+            <div id="inmuebleId" class="col-lg-6 col-md-6">
                 <label for="id" class="form-label">ID</label>
                 <input name="id" id="id" class="form-control" type="text">
             </div>
@@ -52,14 +52,15 @@
             <div class="col-lg-6 col-md-6">
                 <label for="tipo_inmueble_fk" class="form-label">Tipo de Inmueble</label>
                 <select name="tipo_inmueble_fk" id="tipo_inmueble_fk" class="form-select" aria-label="Selección de tipo de inmueble">
+                    <option selected>Seleccionar</option>
                     <option value="1">Casa</option>
                     <option value="2">Apartamento</option>
                     <option value="3">Terreno</option>
                 </select>
             </div>
             <div class="col-lg-6 col-md-6">
-                <label for="provincia_fkdireccion_exacta" class="form-label">Provincia</label>
-                <select name="provincia_fkdireccion_exacta" id="provincia_fkdireccion_exacta" class="form-select" aria-label="Selección de provincia">
+                <label for="provincia_fk" class="form-label">Provincia</label>
+                <select name="provincia_fk" id="provincia_fk" class="form-select" aria-label="Selección de provincia">
                     <option selected>Seleccionar</option>
                     <option value="1">San José</option>
                     <option value="2">Cartago</option>
@@ -83,7 +84,7 @@
             </div>
             <div class="col-lg-6 col-md-6">
                 <label for="precio" class="form-label">Precio $</label>
-                <input name="precio" id="precio" class="form-control" type="number">
+                <input name="precio" id="precio" class="form-control">
             </div>
             <div class="col-lg-6 col-md-6">
                 <label for="cant_habitaciones" class="form-label">Cantidad de Habitaciones</label>
@@ -110,15 +111,15 @@
             </div>
             <div class="col-lg-6 col-md-6">
                 <label for="nombre_completo" class="form-label">Nombre del vendedor</label>
-                <input name="nombre_completo" id="nombre_completo" class="form-control" type="number" disabled>
+                <input name="nombre_completo" id="nombre_completo" class="form-control" type="text">
             </div>
             <div class="col-lg-6 col-md-6">
                 <label for="correo" class="form-label">Correo del vendedor</label>
-                <input name="correo" id="correo" class="form-control" type="email" disabled>
+                <input name="correo" id="correo" class="form-control" type="email">
             </div>
             <div class="col-lg-6 col-md-6">
                 <label for="telefono" class="form-label">Teléfono del vendedor</label>
-                <input name="telefono" id="telefono" class="form-control" type="number" disabled>
+                <input name="telefono" id="telefono" class="form-control" type="number">
             </div>
         </fieldset>
         <fieldset class="row" id="imagenes">
@@ -136,7 +137,7 @@
                 <label for="foto3" class="form-label">Foto de la propiedad 3</label>
                 <input name="foto3" id="foto3" class="form-control" type="file">
             </div>
-            <!-- El sisguiente input tiene que ser dinamico ya que es opcional -->
+            <!-- El siguiente input tiene que ser dinamico ya que es opcional -->
             <div class="col-lg-6 col-md-6">
                 <label class="form-label">Foto de la propiedad n</label>
                 <div>
@@ -151,7 +152,7 @@
             <button type="submit" id="guardar" class="btn btn-success">Guardar Cambios</button>
             <button type="button" id="cancelar" class="btn btn-danger">Cancelar</button>
         </div>
-    </div>
+    </form>
     <!-- Modal -->
     <div class="modal fade" id="modal" tabindex="-1" aria-labelledby="Modal vendedores" aria-hidden="true" data-bs-backdrop="static">
         <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
@@ -161,37 +162,7 @@
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
                 <div class="modal-body">
-                    <!-- <div class="row">
-                        <div class="col-12 col-6">
-                            <h3 class="text-center">Nuevo Vendedor</h3>
-                            <label for="cedula" class="form-label">Cédula</label>
-                            <input name="cedula" id="cedula" class="form-control" type="number">
-                        </div>
-                        <div class="col-12 col-6">
-                            <label for="nombre" class="form-label">Nombre</label>
-                            <input name="nombre" id="nombre" class="form-control" type="text">
-                        </div>
-                        <div class="col-12 col-6">
-                            <label for="apellido1" class="form-label">1° Apellido</label>
-                            <input name="apellido1" id="apellido1" class="form-control" type="text">
-                        </div>
-                        <div class="col-12 col-6">
-                            <label for="apellido2" class="form-label">2° Apellido</label>
-                            <input name="apellido2" id="apellido2" class="form-control" type="text">
-                        </div>
-                        <div class="col-12 col-6">
-                            <label for="correo" class="form-label">Correo electrónico</label>
-                            <input name="correo" id="apellido2" class="form-control" type="email">
-                        </div>
-                        <div class="col-12 col-6">
-                            <label for="telefono" class="form-label">Teléfono</label>
-                            <input name="telefono" id="telefono" class="form-control" type="number">
-                        </div>
-                        <div class="mb-4 d-block justify-content-center">
-                        <button type="submit" id="guardarVendedor" class="btn btn-success">Guardar Cambios</button>
-                        <button type="button" id="cancelarOpc" class="btn btn-danger">Cancelar</button>
-                        </div>
-                    </div> -->
+                    <!-- Contenido dinamico -->
                     <button id="agregar-vendedor" class="btn btn-success"><i class="fa-solid fa-user-plus"></i> Añadir</button>
                     <!-- tabla para seleccionar vendedor -->
                     <table class="table">

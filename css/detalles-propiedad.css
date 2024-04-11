@@ -135,8 +135,12 @@ legend{
 
 #agregar-vendedor,
 #guardarVendedor,
-#cancelarOpc{
+#cancelarOpc, tbody{
     font-size: small;
+}
+
+tbody{
+    font-size: medium;
 }
 
 .btn-seleccion{
@@ -146,4 +150,9 @@ legend{
 .btn-seleccion:hover{
     color: var(--texto-color-claro);
     background-color: var(--Azul-oscuro-2);
+}
+
+.error{
+    color: var(--error);
+    font-style: italic;
 }
