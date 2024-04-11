@@ -56,7 +56,7 @@
 }
 .usuario-info{
     width: 70%;
-    margin: 25px auto;
+    margin: 40px auto;
 }
 
 .botones{
@@ -90,3 +90,6 @@
     color: var(--Azul-oscuro-2);
 }
 
+label{
+    margin-top: 20px;
+}
