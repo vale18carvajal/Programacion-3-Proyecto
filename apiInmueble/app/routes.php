@@ -18,7 +18,33 @@ return function (App $app) {
         return $response;
     });
 
+    //INCIO DE SESIÓN
+    $app->get('/iniciarSesion/{username}/{pass}', function (Request $request, Response $response, array $args) {
+        $username = $args["username"];
+        $pass = $args["pass"];
+        //Realizar conexion
+        $db = conectar();
 
+        //Cambiar a modo fetch
+        $db->SetFetchMode(ADODB_FETCH_ASSOC);
+
+        //Consula sql
+        $sql = "SELECT nombre_usuario, clave
+                FROM usuario
+                WHERE nombre_usuario='$username'";
+                
+        //Ejecutar la consulta en modo fetch
+        $res = $db->GetAll($sql);
+
+        //Validacion de usuario y contraseña correctos
+        if (!empty($res) && $res[0]['nombre_usuario'] == $username && $res[0]['clave'] == $pass) {
+            $response->getBody()->write("1");
+        } else {
+            $response->getBody()->write("0");
+        }
+        return $response;
+    });
+    
     //CRUD USUARIO
     //Agregar usuario
     $app->post('/usuario', function (Request $request, Response $response) {
@@ -95,7 +121,7 @@ return function (App $app) {
         $db->SetFetchMode(ADODB_FETCH_ASSOC);
 
         //Consula sql
-        $sql = "SELECT u.cedula, u.nombre, u.apellido1, u.apellido2, u.fecha_nacimiento, u.correo, u.telefono, u.nombre_usuario, 
+        $sql = "SELECT u.cedula, u.nombre, u.apellido1, u.apellido2, u.fecha_nacimiento, u.clave, u.correo, u.telefono, u.nombre_usuario, 
                 u.foto_perfil, u.rol_fk, u.bloqueado
                 FROM usuario u
                 WHERE u.nombre_usuario='$usuario'";
