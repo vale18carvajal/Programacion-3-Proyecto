@@ -299,21 +299,21 @@ return function (App $app) {
             $precioMax = null;
     
             switch ($precio) {
-                case "-50":
+                case "-70":
                     $precioMin = -1;
-                    $precioMax = 50000000;
+                    $precioMax = 70000;
                     break;
-                case "50-100":
-                    $precioMin = 50000000;
-                    $precioMax = 100000000;
+                case "70-195":
+                    $precioMin = 70000;
+                    $precioMax = 195000;
                     break;
-                case "100-150":
-                    $precioMin = 100000000;
-                    $precioMax = 150000000;
+                case "195-395":
+                    $precioMin = 195000;
+                    $precioMax = 395000;
                     break;
-                case "150+":
-                    $precioMin = 150000000;
-                    $precioMax = 999999999;
+                case "395+":
+                    $precioMin = 395000;
+                    $precioMax = 99999999999999;
                     break;
                 default:
                     $precioMin = -1;
@@ -343,7 +343,7 @@ return function (App $app) {
             return $response->withHeader('Content-Type','application/json');
         });
 
-        
+
     //Buscar inmuebles por id
     $app->get('/inmueble/{idInmueble}', function (Request $request, Response $response, array $args) {
         $idInmueble = $args["idInmueble"];

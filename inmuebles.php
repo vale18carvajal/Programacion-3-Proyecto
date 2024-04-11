@@ -36,10 +36,10 @@ function keepFilterValue($param_name, $value){
                     <select class="form-select col-md-6 col-lg-6" aria-label="Rango de precios" id="rango" name="precio"
                         name="filtroRango">
                         <option value="" <?php echo keepFilterValue('precio', '') ?>>Seleccionar</option>
-                        <option value="-50" <?php echo keepFilterValue('precio',"-50")?>>Menos de ¢50 000 000</option>
-                        <option value="50-100" <?php echo keepFilterValue('precio',"50-100")?>>¢50 000 000 a ¢100 000 000</option>
-                        <option value="100-150" <?php echo keepFilterValue('precio',"100-150")?>>¢100 000 000 a ¢150 000 000</option>
-                        <option value="150+" <?php echo keepFilterValue('precio',"150+")?>>¢150 000 000 y más</option>
+                        <option value="-50" <?php echo keepFilterValue('precio',"-70")?>>Menos de $70 000</option>
+                        <option value="50-100" <?php echo keepFilterValue('precio',"70-195")?>>$70 000 a $195 000</option>
+                        <option value="100-150" <?php echo keepFilterValue('precio',"195-395")?>>$195 000 a $395 000</option>
+                        <option value="150+" <?php echo keepFilterValue('precio',"395+")?>>$395 000 y más</option>
                     </select>
                 </div>
                 <div class="col-md-6 col-lg-6">
