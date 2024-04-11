@@ -299,10 +299,6 @@ return function (App $app) {
             $precioMax = null;
     
             switch ($precio) {
-                case "-70":
-                    $precioMin = -1;
-                    $precioMax = 70000;
-                    break;
                 case "70-195":
                     $precioMin = 70000;
                     $precioMax = 195000;
