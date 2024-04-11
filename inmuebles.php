@@ -75,7 +75,7 @@ function keepFilterValue($param_name, $value){
             $locationFilter = isset($_GET['ubicacion']) ? $_GET['ubicacion'] : "";
             $priceRangeFilter = isset($_GET['precio']) ? $_GET['precio'] : "";
 
-            $endpoint = 'http://localhost:8080/inmuebles';
+            $endpoint = 'http://localhost:8080/inmuebledis';
 
             $endpointParams = [
                 'tipoInmueble' => $propertyTypeFilter,
