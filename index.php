@@ -66,86 +66,15 @@
     </div>
   </div>
 
+  
   <div class="row propiedades container justify-content-center mt-5">
-    <h3>Nuestras Propiedades</h3>
-    <div class="card col-md-4 col-lg-3 col-sm-12" style="width: 18rem;">
+  <h3>Nuestras Propiedades</h3>
+    <div id="5" class="card col-md-4 col-lg-3 col-sm-12" style="width: 18rem;">
       <img class="mt-0" src="https://hips.hearstapps.com/hmg-prod/images/casa-reformada-decorada-elegante-colores-neutros-tonos-pastel-salon-cocina-abierta-molduras-1669197336.jpg" class="card-img-top" alt="...">
       <div class="card-body">
         <h5 class="card-title">Nombre Propiedad</h5>
         <p class="card-text">Aquí va el texto de la dirección exacta de la propiedad.</p>
-        <a href="detalle-inmueble.php" class="btn btn-azul">Ver detalles</a>
-      </div>
-    </div>
-    <div class="card col-md-4 col-lg-3 col-sm-12" style="width: 18rem;">
-      <img class="mt-0" src="https://hips.hearstapps.com/hmg-prod/images/casa-reformada-decorada-elegante-colores-neutros-tonos-pastel-salon-cocina-abierta-molduras-1669197336.jpg" class="card-img-top" alt="...">
-      <div class="card-body">
-        <h5 class="card-title">Nombre Propiedad</h5>
-        <p class="card-text">Aquí va el texto de la dirección exacta de la propiedad.</p>
-        <a href="detalle-inmueble.php" class="btn btn-azul">Ver detalles</a>
-      </div>
-    </div>
-    <div class="card col-md-4 col-lg-3 col-sm-12" style="width: 18rem;">
-      <img class="mt-0" src="https://hips.hearstapps.com/hmg-prod/images/casa-reformada-decorada-elegante-colores-neutros-tonos-pastel-salon-cocina-abierta-molduras-1669197336.jpg" class="card-img-top" alt="...">
-      <div class="card-body">
-        <h5 class="card-title">Nombre Propiedad</h5>
-        <p class="card-text">Aquí va el texto de la dirección exacta de la propiedad.</p>
-        <a href="detalle-inmueble.php" class="btn btn-azul">Ver detalles</a>
-      </div>
-    </div>
-    <div class="card col-md-4 col-lg-3 col-sm-12" style="width: 18rem;">
-      <img class="mt-0" src="https://hips.hearstapps.com/hmg-prod/images/casa-reformada-decorada-elegante-colores-neutros-tonos-pastel-salon-cocina-abierta-molduras-1669197336.jpg" class="card-img-top" alt="...">
-      <div class="card-body">
-        <h5 class="card-title">Nombre Propiedad</h5>
-        <p class="card-text">Aquí va el texto de la dirección exacta de la propiedad.</p>
-        <a href="detalle-inmueble.php" class="btn btn-azul">Ver detalles</a>
-      </div>
-    </div>
-    <div class="card col-md-4 col-lg-3 col-sm-12" style="width: 18rem;">
-      <img class="mt-0" src="https://hips.hearstapps.com/hmg-prod/images/casa-reformada-decorada-elegante-colores-neutros-tonos-pastel-salon-cocina-abierta-molduras-1669197336.jpg" class="card-img-top" alt="...">
-      <div class="card-body">
-        <h5 class="card-title">Nombre Propiedad</h5>
-        <p class="card-text">Aquí va el texto de la dirección exacta de la propiedad.</p>
-        <a href="detalle-inmueble.php" class="btn btn-azul">Ver detalles</a>
-      </div>
-    </div>
-    <div class="card col-md-4 col-lg-3 col-sm-12" style="width: 18rem;">
-      <img class="mt-0" src="https://hips.hearstapps.com/hmg-prod/images/casa-reformada-decorada-elegante-colores-neutros-tonos-pastel-salon-cocina-abierta-molduras-1669197336.jpg" class="card-img-top" alt="...">
-      <div class="card-body">
-        <h5 class="card-title">Nombre Propiedad</h5>
-        <p class="card-text">Aquí va el texto de la dirección exacta de la propiedad.</p>
-        <a href="detalle-inmueble.php" class="btn btn-azul">Ver detalles</a>
-      </div>
-    </div>
-    <div class="card col-md-4 col-lg-3 col-sm-12" style="width: 18rem;">
-      <img class="mt-0" src="https://hips.hearstapps.com/hmg-prod/images/casa-reformada-decorada-elegante-colores-neutros-tonos-pastel-salon-cocina-abierta-molduras-1669197336.jpg" class="card-img-top" alt="...">
-      <div class="card-body">
-        <h5 class="card-title">Nombre Propiedad</h5>
-        <p class="card-text">Aquí va el texto de la dirección exacta de la propiedad.</p>
-        <a href="detalle-inmueble.php" class="btn btn-azul">Ver detalles</a>
-      </div>
-    </div>
-    <div class="card col-md-4 col-lg-3 col-sm-12" style="width: 18rem;">
-      <img class="mt-0" src="https://hips.hearstapps.com/hmg-prod/images/casa-reformada-decorada-elegante-colores-neutros-tonos-pastel-salon-cocina-abierta-molduras-1669197336.jpg" class="card-img-top" alt="...">
-      <div class="card-body">
-        <h5 class="card-title">Nombre Propiedad</h5>
-        <p class="card-text">Aquí va el texto de la dirección exacta de la propiedad.</p>
-        <a href="detalle-inmueble.php" class="btn btn-azul">Ver detalles</a>
-      </div>
-    </div>
-    <div class="card col-md-4 col-lg-3 col-sm-12" style="width: 18rem;">
-      <img class="mt-0" src="https://hips.hearstapps.com/hmg-prod/images/casa-reformada-decorada-elegante-colores-neutros-tonos-pastel-salon-cocina-abierta-molduras-1669197336.jpg" class="card-img-top" alt="...">
-      <div class="card-body">
-        <h5 class="card-title">Nombre Propiedad</h5>
-        <p class="card-text">Aquí va el texto de la dirección exacta de la propiedad.</p>
-        <a href="detalle-inmueble.php" class="btn btn-azul">Ver detalles</a>
-      </div>
-    </div>
-    <div class="card col-md-4 col-lg-3 col-sm-12" style="width: 18rem;">
-      <img class="mt-0" src="https://hips.hearstapps.com/hmg-prod/images/casa-reformada-decorada-elegante-colores-neutros-tonos-pastel-salon-cocina-abierta-molduras-1669197336.jpg" class="card-img-top" alt="...">
-      <div class="card-body">
-        <h5 class="card-title">Nombre Propiedad</h5>
-        <p class="card-text">Aquí va el texto de la dirección exacta de la propiedad.</p>
-        <a href="detalle-inmueble.php" class="btn btn-azul">Ver detalles</a>
+        <button class="btn btn-azul detalles">Ver detalles</button>
       </div>
     </div>
   </div>

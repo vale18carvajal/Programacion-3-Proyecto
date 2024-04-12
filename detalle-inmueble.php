@@ -1,6 +1,5 @@
 <?php
 include "shared/header.php";
-
 ?>
 
 <main>
@@ -36,65 +35,69 @@ include "shared/header.php";
                 <div class="accordion-item">
                     <h2 class="accordion-header" id="headingOne">
                         <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#nombre" aria-expanded="true" aria-controls="collapseOne">
-                        <i class="fa-solid fa-house"></i> Nombre de la Propiedad
+                            <i class="fa-solid fa-house"></i> Nombre de la Propiedad
                         </button>
                     </h2>
                     <div id="nombre" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
                         <div id="nombre_inmueble" class="accordion-body">
-                            <strong>This is the first item's accordion body.</strong> It is shown by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or overriding our default variables. It's also worth noting that just about any HTML can go within the <code>.accordion-body</code>, though the transition does limit overflow.
+                            <!-- texto dinaminco -->
+                            <span></span>
                         </div>
                     </div>
                 </div>
                 <div class="accordion-item">
                     <h2 class="accordion-header" id="headingTwo">
                         <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#direccion" aria-expanded="false" aria-controls="collapseTwo">
-                        <i class="fa-solid fa-location-dot"></i> Dirección
+                            <i class="fa-solid fa-location-dot"></i> Dirección
                         </button>
                     </h2>
                     <div id="direccion" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
                         <div id="direccion_exacta" class="accordion-body">
-                            <strong>This is the second item's accordion body.</strong> It is hidden by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or overriding our default variables. It's also worth noting that just about any HTML can go within the <code>.accordion-body</code>, though the transition does limit overflow.
+                            <!-- texto dinaminco -->
+                            <span></span>
                         </div>
                     </div>
                 </div>
                 <div class="accordion-item">
                     <h2 class="accordion-header" id="headingThree">
                         <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#precio_inmueble" aria-expanded="false" aria-controls="collapseThree">
-                        <i class="fa-solid fa-money-bill-transfer"></i> Precio
+                            <i class="fa-solid fa-money-bill-transfer"></i> Precio
                         </button>
                     </h2>
                     <div id="precio_inmueble" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#accordionExample">
                         <div id="precio" class="accordion-body">
-                            <strong>USD $ </strong> 100000
+                            <!-- texto dinaminco -->
+                            <strong>USD $ </strong> <span></span>
                         </div>
                     </div>
                 </div>
                 <div class="accordion-item">
                     <h2 class="accordion-header" id="headingThree">
                         <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#espacios" aria-expanded="false" aria-controls="collapseThree">
-                        <i class="fa-solid fa-door-open"></i>Habitaciones y Espacios
+                            <i class="fa-solid fa-door-open"></i>Habitaciones y Espacios
                         </button>
                     </h2>
                     <div id="espacios" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#accordionExample">
                         <div id="cant_habitaciones" class="accordion-body">
-                            <strong>Número de habitaciones: </strong> n
+                            <!-- texto dinaminco -->
+                            <strong>Número de habitaciones: </strong> <span></span>
                         </div>
                         <div id="cant_banios" class="accordion-body">
-                            <strong>Cantidad de baños: </strong> n
+                            <strong>Cantidad de baños: </strong> <span></span>
                         </div>
                         <div id="cant_vehiculos" class="accordion-body">
-                            <strong>Espacio para vehículos: </strong> n
+                            <strong>Espacio para vehículos: </strong> <span></span>
                         </div>
                     </div>
                 </div>
                 <div class="accordion-item">
                     <h2 class="accordion-header" id="headingThree">
                         <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#contacto" aria-expanded="false" aria-controls="collapseThree">
-                        <i class="fa-solid fa-address-book"></i> Contacto del Vendedor
+                            <i class="fa-solid fa-address-book"></i> Contacto del Vendedor
                         </button>
                     </h2>
                     <div id="contacto" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#accordionExample">
-                    <div id="nombre_vendedor" class="accordion-body">
+                        <div id="nombre_vendedor" class="accordion-body">
                             <strong>Nombre del vendedor:</strong> Luis Aguilar Sequeira
                         </div>
                         <div id="nombre_vendedor" class="accordion-body">
