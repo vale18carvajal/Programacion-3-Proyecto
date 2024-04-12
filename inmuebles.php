@@ -65,7 +65,7 @@ function keepFilterValue($param_name, $value){
     <div class="text-center">
         <!-- Aquí es donde se muestran las propiedades -->
         <div class="row formulariop mt-5 d-flex justify-content-center">
-            <h3>Propiedades</h3>
+            <h3 class="mb-5">Propiedades</h3>
 
             <?php
 
@@ -82,9 +82,8 @@ function keepFilterValue($param_name, $value){
                 'precio' => $priceRangeFilter
             ];
 
-
-            $url = $endpoint . '?' . http_build_query($endpointParams);
-            $ch = curl_init($url);
+            $URL_ = $endpoint . '?' . http_build_query($endpointParams);
+            $ch = curl_init($URL_);
 
             curl_setopt($ch, CURLOPT_HTTPGET, true);
             curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
@@ -113,7 +112,7 @@ function keepFilterValue($param_name, $value){
             $propertiesPerPage = array_slice($properties, $startIndex, $endIndex);
 
             foreach ($propertiesPerPage as $property): ?>
-                <div class="card1 col-6 border" style="width: 18rem;">
+                <div id="<?php echo $property['id']; ?>" class="card col-6 border" style="width: 18rem;">
                     <img class="mt-0" src="<?php echo "https://hips.hearstapps.com/hmg-prod/images/casa-reformada-decorada-elegante-colores-neutros-tonos-pastel-salon-cocina-abierta-molduras-1669197336.jpg"; ?>" class="card-img-top" alt="...">
                     <div class="card-body">
                         <h5 class="card-title">
@@ -122,8 +121,7 @@ function keepFilterValue($param_name, $value){
                         <p class="card-text">
                             <?php echo $property['direccion_exacta']; ?>
                         </p>
-                        <a href="#" class="btn btn-azul" data-toggle="modal"
-                            data-target="#propertyModal<?php echo $index; ?>">Ver detalles</a>
+                        <button class="btn btn-azul detalles">Ver detalles</button>
                     </div>
                 </div>
             <?php endforeach; ?>

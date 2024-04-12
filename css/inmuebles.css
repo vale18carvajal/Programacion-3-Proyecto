@@ -75,11 +75,25 @@ select{
     margin: 10px auto !important;
 }
 
-.card1 {
+/* .card1 {
     padding: 10px !important;
     margin: 8px;
     transition: transform 0.3s ease-in-out;
+} */
+
+.card{
+    padding: 0 !important;
+    margin-bottom: 20px;
+    margin-right: 15px;
 }
+.card img{
+    border-radius: 5px !important;
+    -webkit-border-radius: 5px !important;
+    -moz-border-radius: 5px !important;
+    -ms-border-radius: 5px !important;
+    -o-border-radius: 5px !important;
+}
+
 
 .card:hover {
     transform: scale(1.05);
@@ -91,10 +105,10 @@ select{
     flex-wrap: wrap;
 }
 
-.mt-0 {
-    width: 80%; /* Esto hará que la imagen tome todo el ancho de la tarjeta, pero no más */
-    height: auto; /* Esto mantendrá la proporción de la imagen */
-}
+ /*.mt-0 {
+   width: 80%; Esto hará que la imagen tome todo el ancho de la tarjeta, pero no más */
+    /*height: auto;  Esto mantendrá la proporción de la imagen 
+}*/
 
 .btnfiltro {
     width: 200px;  
