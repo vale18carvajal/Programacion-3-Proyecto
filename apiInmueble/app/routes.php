@@ -364,6 +364,28 @@ return function (App $app) {
         return $response;
     });
 
+    //ULTIMAS 10 PROPIEDADES PARA INDEX
+    $app->get('/inmuebles-index', function (Request $request, Response $response) {
+        //Realizar conexion
+        $db = conectar();
+
+        //Cambiar a modo fetch
+        $db->SetFetchMode(ADODB_FETCH_ASSOC);
+
+        //Consula sql
+        $sql = "SELECT id, nombre_inmueble, direccion_exacta 
+        FROM inmueble 
+        WHERE estado_fk = '1'
+        ORDER BY id DESC
+        LIMIT 10";
+
+        //Ejecutar la consulta en modo fetch
+        $res = $db->GetAll($sql);
+
+        $response->getBody()->write(json_encode($res));
+        return $response;
+    });
+
     //Reporte general
     $app->get('/reporte-general-inmuebles', function (Request $request, Response $response) {
         //Realizar conexion
