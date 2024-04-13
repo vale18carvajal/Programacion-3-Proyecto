@@ -97,17 +97,17 @@ include "shared/header.php";
                         </button>
                     </h2>
                     <div id="contacto" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#accordionExample">
-                        <div id="nombre_vendedor" class="accordion-body">
-                            <strong>Nombre del vendedor:</strong> Luis Aguilar Sequeira
+                        <div id="nombre_completo" class="accordion-body">
+                            <strong>Nombre del vendedor:</strong> <span></span>
                         </div>
-                        <div id="nombre_vendedor" class="accordion-body">
-                            <strong>Correo:</strong> ejemplo@gmail.com
+                        <div id="correo" class="accordion-body">
+                            <strong>Correo:</strong> <span></span>
                         </div>
-                        <div id="nombre_vendedor" class="accordion-body">
-                            <strong>Teléfono: </strong> 88888888
+                        <div id="telefono" class="accordion-body">
+                            <strong>Teléfono: </strong> <span></span>
                         </div>
-                        <div id="nombre_vendedor" class="accordion-body">
-                            <strong>Whatsapp: </strong> Link
+                        <div id="" class="accordion-body">
+                        <a id="whatsapp" target="_blank" href=""><strong>Link de Whatsapp</strong></a>
                         </div>
                     </div>
                 </div>
