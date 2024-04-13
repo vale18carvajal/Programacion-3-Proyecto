@@ -32,7 +32,7 @@ return function (App $app) {
         $sql = "SELECT nombre_usuario, clave
                 FROM usuario
                 WHERE nombre_usuario='$username'";
-                
+
         //Ejecutar la consulta en modo fetch
         $res = $db->GetAll($sql);
 
@@ -44,7 +44,7 @@ return function (App $app) {
         }
         return $response;
     });
-    
+
     //CRUD USUARIO
     //Agregar usuario
     $app->post('/usuario', function (Request $request, Response $response) {
@@ -285,43 +285,43 @@ return function (App $app) {
         return $response;
     });
 
-        //Busar inmuebles por filtros
-        $app->get('/inmuebledis', function (Request $request, Response $response) {
-            //Realizar conexion
-            $db = conectar();
-            $queryParams = $request->getQueryParams();
-    
-            $tipoInmueble = $queryParams["tipoInmueble"] ?? "";
-            $ubicacion = $queryParams["ubicacion"] ?? "";
-            $precio = $queryParams["precio"] ?? "";
-    
-            $precioMin = null;
-            $precioMax = null;
-    
-            switch ($precio) {
-                case "70-195":
-                    $precioMin = 70000;
-                    $precioMax = 195000;
-                    break;
-                case "195-395":
-                    $precioMin = 195000;
-                    $precioMax = 395000;
-                    break;
-                case "395+":
-                    $precioMin = 395000;
-                    $precioMax = 99999999999999;
-                    break;
-                default:
-                    $precioMin = -1;
-                    $precioMax = 999999999;
-                    break;
-            };
-    
-            //Cambiar a modo fetch
-            $db->SetFetchMode(ADODB_FETCH_ASSOC);
-    
-            //Consula sql
-            $sql = "SELECT i.id, i.nombre_inmueble, e.descripcion_estado, i.codigo_vendedor, i.direccion_exacta
+    //Busar inmuebles por filtros
+    $app->get('/inmuebledis', function (Request $request, Response $response) {
+        //Realizar conexion
+        $db = conectar();
+        $queryParams = $request->getQueryParams();
+
+        $tipoInmueble = $queryParams["tipoInmueble"] ?? "";
+        $ubicacion = $queryParams["ubicacion"] ?? "";
+        $precio = $queryParams["precio"] ?? "";
+
+        $precioMin = null;
+        $precioMax = null;
+
+        switch ($precio) {
+            case "70-195":
+                $precioMin = 70000;
+                $precioMax = 195000;
+                break;
+            case "195-395":
+                $precioMin = 195000;
+                $precioMax = 395000;
+                break;
+            case "395+":
+                $precioMin = 395000;
+                $precioMax = 99999999999999;
+                break;
+            default:
+                $precioMin = -1;
+                $precioMax = 999999999;
+                break;
+        };
+
+        //Cambiar a modo fetch
+        $db->SetFetchMode(ADODB_FETCH_ASSOC);
+
+        //Consula sql
+        $sql = "SELECT i.id, i.nombre_inmueble, e.descripcion_estado, i.codigo_vendedor, i.direccion_exacta
             FROM inmueble i
             JOIN estado e ON e.codigo_estado = i.estado_fk
             JOIN tipo_inmueble ti ON ti.codigo_tipo = i.tipo_inmueble_fk
@@ -331,13 +331,13 @@ return function (App $app) {
                 AND (i.precio >= {$precioMin} AND i.precio < {$precioMax})
                 AND i.estado_fk = 1 -- Estado DISPONIBLE
             ";
-    
-            //Ejecutar la consulta en modo fetch
-            $res = $db->GetAll($sql);
-    
-            $response->getBody()->write(json_encode($res));
-            return $response->withHeader('Content-Type','application/json');
-        });
+
+        //Ejecutar la consulta en modo fetch
+        $res = $db->GetAll($sql);
+
+        $response->getBody()->write(json_encode($res));
+        return $response->withHeader('Content-Type', 'application/json');
+    });
 
 
     //Buscar inmuebles por id
@@ -386,8 +386,14 @@ return function (App $app) {
         return $response;
     });
 
-    //Reporte general
-    $app->get('/reporte-general-inmuebles', function (Request $request, Response $response) {
+
+    //Reporte
+    $app->get('/reporte/{disp}/{prov}/{tipo}', function (Request $request, Response $response, array $args) {
+        //Parámentros
+        $disponible = $args["disp"];
+        $provincia = $args["prov"];
+        $tipo = $args["tipo"];
+
         //Realizar conexion
         $db = conectar();
 
@@ -399,7 +405,20 @@ return function (App $app) {
         FROM inmueble i
         JOIN provincia p ON p.codigo_provincia = i.provincia_fk
         JOIN tipo_inmueble t ON t.codigo_tipo = i.tipo_inmueble_fk
-        JOIN estado e ON e.codigo_estado = i.estado_fk";
+        JOIN estado e ON e.codigo_estado = i.estado_fk
+        WHERE 1";
+
+        if ($disponible ==! '0') {
+            $sql .= " AND estado_fk = '$disponible'";
+        }
+
+        if ($provincia ==! '0') {
+            $sql .= " AND provincia_fk = '$provincia'";
+        }
+
+        if ($tipo ==! '0') {
+            $sql .= " AND tipo_inmueble_fk = '$tipo'";
+        }
 
         //Ejecutar la consulta en modo fetch
         $res = $db->GetAll($sql);
