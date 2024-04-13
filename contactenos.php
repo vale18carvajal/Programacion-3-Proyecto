@@ -20,7 +20,7 @@
         </p>
     </div>
     <div class="c-formulario col-md-12 col-lg-8">
-    <form class="row formulario">
+    <form class="row formulario" action="https://formsubmit.co/46dc126d190a0d7cef3401cef0e867c7" method="POST">
         <div class="col-md-6 col-lg-6 mb-3">
             <label for="nombre">Nombre</label>
             <input type="text" class="form-control" id="nombre" name="nombre">
@@ -53,8 +53,11 @@
             <textarea class="form-control" id="mensaje" name="mensaje" cols="30" rows="10" placeholder="Description"></textarea>
         </div>
         <div class="mb-3">
-            <button class="btn btn-azul enviar" type="button">Enviar</button>
+            <button class="btn btn-azul enviar" type="submit">Enviar</button>
         </div>
+        <!-- Para ocultar el captcha y que no se dirigia a la página de FormSubmit -->
+        <input type="hidden" name="_next" value="http://localhost/Programacion-3-Proyecto/contactenos.php">
+        <input type="hidden" name="_captcha" value="false">
     </form>
     </div>
 
