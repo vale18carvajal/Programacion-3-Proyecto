@@ -6,5 +6,8 @@ $(".detalles").click(function (e) {
     // Obtener el ID de la carta
     var idCarta = carta.id;
     // Mostrar el ID en la consola
-    console.log("ID de la carta:", idCarta);
+    // console.log("ID de la carta:", idCarta);
+
+    sessionStorage.setItem('idCarta', idCarta);
+    window.location.href = "detalle-inmueble.php";
 });
