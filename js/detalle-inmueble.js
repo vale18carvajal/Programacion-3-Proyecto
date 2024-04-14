@@ -16,6 +16,7 @@ function cargarDatos(inmueble) {
             $("#cant_banios span").html(response.cant_banios);
             $("#cant_vehiculos span").html(response.cant_vehiculos);
             cargarVendedor(response.codigo_vendedor);
+            generarQR();
         },
         error: function (er) {
             console.log(er.statusText + er.responseText);
@@ -51,4 +52,14 @@ function cargarImagenes(datos){
     $("#foto1").attr("src", `img/fotos-propiedades/${datos.id}-img1.jpg`);
     $("#foto2").attr("src", `img/fotos-propiedades/${datos.id}-img2.jpg`);
     $("#foto3").attr("src", `img/fotos-propiedades/${datos.id}-img3.jpg`);
+}
+
+//Generar el código QR
+function generarQR(){
+     new QRCode(document.getElementById("qr"), {
+        text: "http://localhost/Programacion-3-Proyecto/detalle-inmueble.php",
+        colorDark : "#0D518C",
+        colorLight : "#F1F1F4",
+        correctLevel : QRCode.CorrectLevel.H
+    });
 }
