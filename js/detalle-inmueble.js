@@ -8,6 +8,7 @@ function cargarDatos(inmueble) {
         url: `http://localhost:8080/inmueble/${inmueble}`,
         dataType: "JSON",
         success: function (response) {
+            cargarImagenes(response);
             $("#nombre_inmueble span").html(response.nombre_inmueble);
             $("#direccion_exacta span").html(response.direccion_exacta);
             $("#precio span").html(response.precio);
@@ -44,4 +45,10 @@ function cargarVendedor(id) {
         }
 
     });
+}
+
+function cargarImagenes(datos){
+    $("#foto1").attr("src", `img/fotos-propiedades/${datos.id}-img1.jpg`);
+    $("#foto2").attr("src", `img/fotos-propiedades/${datos.id}-img2.jpg`);
+    $("#foto3").attr("src", `img/fotos-propiedades/${datos.id}-img3.jpg`);
 }
