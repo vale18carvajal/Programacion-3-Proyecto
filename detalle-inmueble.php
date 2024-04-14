@@ -30,7 +30,7 @@ include "shared/header.php";
 
     <div class="row info">
         <h3 class="mb-3">Información de la Propiedad</h3>
-        <div class=" contenedor col-md-12 col-lg-8">
+        <div class="mb-5 contenedor col-md-12 col-lg-8">
             <div class="accordion" id="accordionExample">
                 <div class="accordion-item">
                     <h2 class="accordion-header" id="headingOne">
@@ -41,7 +41,7 @@ include "shared/header.php";
                     <div id="nombre" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
                         <div id="nombre_inmueble" class="accordion-body">
                             <!-- texto dinaminco -->
-                            <span></span>
+                            <strong><span></span></strong>
                         </div>
                     </div>
                 </div>
@@ -115,10 +115,11 @@ include "shared/header.php";
             </div>
         </div>
 
-        <div class="contenedor col-md-12 col-lg-4 d-flex align-align-items-center">
-            <div class="qr">
+        <div class="contenedorQR col-md-12 col-lg-4 ">
+            <div id="qr" class="qr">
 
             </div>
+            <h5 class="mt-4 text-center">Puedes escanear el código QR</h5>
         </div>
     </div>
 
