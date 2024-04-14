@@ -47,12 +47,20 @@ function crearFilas(dato) {
         bloq = "Sí";
     }
 
+    //validacion si tiene foto de perfil o no
+    let foto = "";
+    if (dato.foto_perfil == 0) {
+        foto = `img/foto-predeterminada.webp`
+    } else {
+        foto = `img/fotos-usuarios/${dato.cedula}.jpg`
+    }
+
     return `
     <tr>
         <th scope="row">${dato.nombre_usuario}</th>
             <td>${dato.correo}</td>
             <td>${dato.descripcion_usuario}</td>
-            <td><img class="img-perfil" src="img/${dato.foto_perfil}" alt="foto del usuario"></td>
+            <td><img class="img-perfil" src="${foto}" alt="foto del usuario"></td>
             <td>${bloq}</td>
             <td>${dato.fecha_creacion}</td>
             <td>
