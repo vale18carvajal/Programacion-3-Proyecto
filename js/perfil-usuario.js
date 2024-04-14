@@ -52,8 +52,14 @@ function cargarCampos(username) {
                 }
             }
 
-            //Colocar la foto de perfil y nombre de usuario en el encabezado del form
-            $("#foto").attr("src", `img/${response.foto_perfil}`);
+            //Colocar la foto de perfil
+            if (response.foto_perfil == 0) {
+                $("#foto").attr("src", `img/foto-predeterminada.webp`);
+            } else {
+                $("#foto").attr("src", `img/fotos-usuarios/${response.cedula}.jpg`);
+            }
+
+            //Colocar nombre de usuario en el encabezado del form
             $("#nombreUsuario").html(response.nombre_usuario)
 
             //Validacion de tipo de usuario para mostrar opciones
