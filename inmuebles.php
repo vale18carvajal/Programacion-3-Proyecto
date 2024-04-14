@@ -113,7 +113,7 @@ function keepFilterValue($param_name, $value){
 
             foreach ($propertiesPerPage as $property): ?>
                 <div id="<?php echo $property['id']; ?>" class="card col-6 border" style="width: 18rem;">
-                    <img class="mt-0" src="<?php echo "https://hips.hearstapps.com/hmg-prod/images/casa-reformada-decorada-elegante-colores-neutros-tonos-pastel-salon-cocina-abierta-molduras-1669197336.jpg"; ?>" class="card-img-top" alt="...">
+                    <img class="mt-0" src="img/fotos-propiedades/<?php echo $property['id']; ?>-img1.jpg" class="card-img-top" alt="...">
                     <div class="card-body">
                         <h5 class="card-title">
                             <?php echo $property['nombre_inmueble']; ?>
