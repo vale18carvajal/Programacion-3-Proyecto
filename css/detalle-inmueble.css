@@ -6,7 +6,7 @@ h3{
     color: var(--Azul-oscuro-2);
 }
 .fotos{
-    width: 45%;
+    width: 60%;
     display: block;
     margin: auto;
 }
@@ -40,3 +40,21 @@ i{
     background: linear-gradient(var(--Azul-oscuro-1), var(--Azul-oscuro-2)) !important;
     color: var(--texto-color-claro) !important;
   }
+
+.accordion-item button {
+    font-size: 20px;
+}
+
+.accordion-body{
+    font-size: 18px !important;
+}
+
+#contacto a{
+    color: var(--Azul-oscuro-2);
+    font-weight: lighter;
+}
+
+#contacto a:hover{
+    color: var(--Azul);
+    text-decoration: underline var(--seleccionado);
+}
