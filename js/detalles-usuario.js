@@ -1,11 +1,11 @@
-let OPC= -1;
+let OPC = -1;
 if (sessionStorage.getItem("username") !== 'null') {
     console.log("hola");
     let username = sessionStorage.getItem("username");
     cargarCampos(username);
     OPC = 1;
     deshabilitar();
-} 
+}
 //Validaciones
 let validacionCampos = $(".info-usuario").validate({
     rules: {
@@ -38,7 +38,7 @@ let validacionCampos = $(".info-usuario").validate({
         nombre_usuario: {
             required: true
         },
-        rol_fk:{
+        rol_fk: {
             min: 1
         }
     },
@@ -72,10 +72,10 @@ let validacionCampos = $(".info-usuario").validate({
         nombre_usuario: {
             required: `<i class="fa-solid fa-circle-exclamation"></i> Este campo es obligatorio`
         },
-        rol_fk:{
+        rol_fk: {
             min: `<i class="fa-solid fa-circle-exclamation"></i> Debe seleccionar un tipo de usuario`
         },
-        bloqueado:{
+        bloqueado: {
             min: `<i class="fa-solid fa-circle-exclamation"></i> Debe indicar el estado del usuario`
         }
     }
@@ -113,7 +113,12 @@ function cargarCampos(username) {
             }
 
             //Colocar la foto de perfil y nombre de usuario en el encabezado del form
-            $("#foto").attr("src", `img/${response.foto_perfil}`);
+            if (response.foto_perfil == 0) {
+                $("#foto").attr("src", `img/foto-predeterminada.webp`);
+            } else {
+                $("#foto").attr("src", `img/fotos-usuarios/${response.cedula}.jpg`);
+            }
+
             $("#nombreUsuario").html(response.nombre_usuario)
 
         },
@@ -134,9 +139,18 @@ function guardar() {
     const accion = (OPC == -1) ? "usuario" : "modificar-usuario";
     const peticion = (OPC == -1) ? "POST" : "PUT";
 
+    let foto = $('#foto_perfil')[0].files[0];
+    // Crear un objeto de formulario
+    let formData = new FormData();
+    //Añadir la imagen como objeto form-data
+    formData.append('imagen', foto);
+
     $.ajax({
         type: peticion,
         url: `http://localhost:8080/${accion}?${datos}`,
+        data: formData,
+        processData: false,
+        contentType: false,
         success: function (response) {
             if (OPC == -1) {
                 Swal.fire({
@@ -152,7 +166,7 @@ function guardar() {
                 });
             }
             //Guardar el nuevo nombre de usuario si se ha cambiado para recargar la página
-            sessionStorage.setItem("username",$("#nombre_usuario").val());
+            sessionStorage.setItem("username", $("#nombre_usuario").val());
             username = sessionStorage.getItem("username");
             cargarCampos(username);
         },
@@ -165,10 +179,10 @@ function guardar() {
     });
 }
 
-function deshabilitar(){
+function deshabilitar() {
     $("#cedula").attr("disabled", true);
 }
 
-function habilitar(){
+function habilitar() {
     $("#cedula").attr("disabled", false);
 }
