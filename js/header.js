@@ -12,7 +12,12 @@ function cargarImagen(username) {
         url: `http://localhost:8080/buscar-usuario/${username}`,
         dataType: "JSON",
         success: function (response) {
-            $(".nav-link img").attr("src", `img/${response.foto_perfil}`);
+            //Validacion si el usuario posee foto o no
+            if (response.foto_perfil == 0) {
+                $(".nav-link img").attr("src", `img/foto-predeterminada.webp`);
+            } else {
+                $(".nav-link img").attr("src", `img/fotos-usuarios/${response.cedula}.jpg`);
+            }
         },
         error: function (er) {
             console.log(er.statusText + er.responseText);
