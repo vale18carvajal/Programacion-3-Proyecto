@@ -92,6 +92,8 @@ select{
     -moz-border-radius: 5px !important;
     -ms-border-radius: 5px !important;
     -o-border-radius: 5px !important;
+    height: 215px;
+    object-fit: cover;
 }
 
 
