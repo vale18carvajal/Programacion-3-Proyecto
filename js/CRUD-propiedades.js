@@ -42,7 +42,7 @@ function crearFilas(dato) {
     <tr>
         <th scope="row">${dato.id}</th>
         <td>${dato.nombre_inmueble}</td>
-        <td><img class="img-propiedad" src="img/casa3.png" alt="foto del usuario"></td>
+        <td><img class="img-propiedad" src="img/fotos-propiedades/${dato.id}-img1.jpg" alt="foto del usuario"></td>
         <td>${dato.descripcion_estado}</td>
         <td>${dato.codigo_vendedor}</td>
         <td>
