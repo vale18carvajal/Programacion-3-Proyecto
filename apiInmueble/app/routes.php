@@ -57,6 +57,21 @@ return function (App $app) {
         //Almacenar los datos datos del formulario a la tabla
         $res = $db->AutoExecute("usuario", $rec, "INSERT");
 
+
+        //validacion si se sube un archivo
+        if (isset($_FILES['imagen']['tmp_name']) && file_exists($_FILES['imagen']['tmp_name'])) {
+            //obtener el ultima cedula insertada
+            $idInsertado = $db->insert_Id('usuario', 'cedula');
+            //mover el archivo a la carpeta deseada
+            $nomArchivo = "../../img/fotos-usuarios/$idInsertado.jpg";
+            //mover el archivo
+            move_uploaded_file($_FILES['imagen']['tmp_name'], $nomArchivo);
+
+            //Indicamos que el usuario sí tiene foto y lo alamacenamos en la bd
+            $foto["foto_perfil"] = 1;
+            $res = $db->AutoExecute("usuario", $foto, "UPDATE", "cedula=$rec[cedula]");
+        }
+
         $response->getBody()->write(strval($res));
         return $response;
     });
@@ -71,6 +86,22 @@ return function (App $app) {
         //Almacenar los datos datos del formulario a la tabla persona con el filtrado where
         $res = $db->AutoExecute("usuario", $rec, "UPDATE", "cedula=$rec[cedula]");
 
+        //validacion si se sube un archivo
+        if (isset($_FILES['imagen']['tmp_name']) && file_exists($_FILES['imagen']['tmp_name'])) {
+            //obtener la cedula
+            $idInsertado = "$rec[cedula]";
+            //mover el archivo a la carpeta deseada
+            $nomArchivo = "../../img/fotos-usuarios/$idInsertado.jpg";
+            //mover el archivo
+            move_uploaded_file($_FILES['imagen']['tmp_name'], $nomArchivo);
+
+            //Indicamos que el usuario sí tiene foto y lo alamacenamos en la bd
+            $foto["foto_perfil"] = 1;
+            $res = $db->AutoExecute("usuario", $foto, "UPDATE", "cedula=$rec[cedula]");
+
+            $response->getBody()->write(strval($res));
+            return $response;
+        }
         $response->getBody()->write(strval($res));
         return $response;
     });
@@ -100,7 +131,7 @@ return function (App $app) {
         $db->SetFetchMode(ADODB_FETCH_ASSOC);
 
         //Consula sql
-        $sql = "SELECT u.nombre_usuario, u.correo, r.descripcion_usuario, u.foto_perfil, u.bloqueado, u.fecha_creacion 
+        $sql = "SELECT u.cedula, u.nombre_usuario, u.correo, r.descripcion_usuario, u.foto_perfil, u.bloqueado, u.fecha_creacion 
         FROM usuario u
         JOIN rol_usuario r ON r.codigo_usuario = u.rol_fk";
 
@@ -230,6 +261,23 @@ return function (App $app) {
 
         //Almacenar los datos datos del formulario a la tabla
         $res = $db->AutoExecute("inmueble", $rec, "INSERT");
+
+
+
+        //obtener el ultima cedula insertada
+        $idInsertado = $db->insert_Id('inmueble', 'id');
+        
+        //mover el archivo a la carpeta deseada
+        $nomArchivo = "../../img/fotos-propiedades/$idInsertado-img1.jpg";
+        //mover el archivos
+        move_uploaded_file($_FILES['imagen1']['tmp_name'], $nomArchivo);
+
+        $nomArchivo = "../../img/fotos-propiedades/$idInsertado-img2.jpg";
+        move_uploaded_file($_FILES['imagen2']['tmp_name'], $nomArchivo);
+
+        $nomArchivo = "../../img/fotos-propiedades/$idInsertado-img3.jpg";
+        move_uploaded_file($_FILES['imagen3']['tmp_name'], $nomArchivo);
+
 
         $response->getBody()->write(strval($res));
         return $response;
@@ -408,15 +456,15 @@ return function (App $app) {
         JOIN estado e ON e.codigo_estado = i.estado_fk
         WHERE 1";
 
-        if ($disponible ==! '0') {
+        if ($disponible == !'0') {
             $sql .= " AND estado_fk = '$disponible'";
         }
 
-        if ($provincia ==! '0') {
+        if ($provincia == !'0') {
             $sql .= " AND provincia_fk = '$provincia'";
         }
 
-        if ($tipo ==! '0') {
+        if ($tipo == !'0') {
             $sql .= " AND tipo_inmueble_fk = '$tipo'";
         }
 
