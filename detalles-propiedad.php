@@ -7,19 +7,19 @@
         <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
             <div class="carousel-inner">
                 <div class="carousel-item active">
-                    <img src="img/casa1.png" class="d-block w-100" alt="Foto de la propiedad">
+                    <img id="foto1" src="img/casa1.png" class="d-block w-100" alt="Foto de la propiedad">
                     <div class="carousel-caption d-none d-md-block">
                         <p>Vista previa</p>
                     </div>
                 </div>
                 <div class="carousel-item">
-                    <img src="img/casa2.png" class="d-block w-100" alt="Foto de la propiedad">
+                    <img id="foto2" src="img/casa2.png" class="d-block w-100" alt="Foto de la propiedad">
                     <div class="carousel-caption d-none d-md-block">
                         <p>Vista previa</p>
                     </div>
                 </div>
                 <div class="carousel-item">
-                    <img src="img/casa3.png" class="d-block w-100" alt="Foto de la propiedad">
+                    <img id="foto3" src="img/casa3.png" class="d-block w-100" alt="Foto de la propiedad">
                     <div class="carousel-caption d-none d-md-block">
                         <p>Vista previa</p>
                     </div>
@@ -126,25 +126,25 @@
             <legend>Imágenes de la propiedad <div class="separador"></div>
             </legend>
             <div class="col-lg-6 col-md-6">
-                <label for="foto1" class="form-label">Foto de la propiedad 1</label>
-                <input name="foto1" id="foto1" class="form-control" type="file">
+                <label for="imagen1" class="form-label">Foto de la propiedad 1</label>
+                <input name="imagen1" id="imagen1" class="form-control" type="file">
             </div>
             <div class="col-lg-6 col-md-6">
-                <label for="foto2" class="form-label">Foto de la propiedad 2</label>
-                <input name="foto2" id="foto2" class="form-control" type="file">
+                <label for="imagen2" class="form-label">Foto de la propiedad 2</label>
+                <input name="imagen2" id="imagen2" class="form-control" type="file">
             </div>
             <div class="col-lg-6 col-md-6">
-                <label for="foto3" class="form-label">Foto de la propiedad 3</label>
-                <input name="foto3" id="foto3" class="form-control" type="file">
+                <label for="imagen3" class="form-label">Foto de la propiedad 3</label>
+                <input name="imagen3" id="imagen3" class="form-control" type="file">
             </div>
             <!-- El siguiente input tiene que ser dinamico ya que es opcional -->
-            <div class="col-lg-6 col-md-6">
+            <!-- <div class="col-lg-6 col-md-6">
                 <label class="form-label">Foto de la propiedad n</label>
                 <div>
                     <input class="form-control f-adicional" type="file">
                     <button type="button" class="btn-close eliminar" aria-label="borrar"></button>
                 </div>
-            </div>
+            </div> -->
         </fieldset>
 
         <div class="opciones col-lg-12 col-md-12">
