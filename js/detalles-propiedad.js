@@ -48,13 +48,13 @@ let validacionCampos = $(".datos-propiedad").validate({
         cant_habitaciones: {
             required: true
         },
-        cant_banios:{
+        cant_banios: {
             required: true
         },
-        cant_vehiculos:{
+        cant_vehiculos: {
             required: true
         },
-        codigo_vendedor:{
+        codigo_vendedor: {
             required: true
         }
     },
@@ -87,13 +87,13 @@ let validacionCampos = $(".datos-propiedad").validate({
         cant_habitaciones: {
             required: `<i class="fa-solid fa-circle-exclamation"></i> Este campo es obligatorio`
         },
-        cant_banios:{
+        cant_banios: {
             required: `<i class="fa-solid fa-circle-exclamation"></i> Este campo es obligatorio`
         },
-        cant_vehiculos:{
+        cant_vehiculos: {
             required: `<i class="fa-solid fa-circle-exclamation"></i> Este campo es obligatorio`
         },
-        codigo_vendedor:{
+        codigo_vendedor: {
             required: `<i class="fa-solid fa-circle-exclamation"></i> Este campo es obligatorio`
         }
     }
@@ -166,7 +166,7 @@ function habilitar() {
     let campos = $("*[name]");
     // recorremos el arreglo
     for (let i = 0; i < campos.length; i++) {
-            $(campos[i]).attr("disabled", false);
+        $(campos[i]).attr("disabled", false);
     }
 }
 
@@ -192,7 +192,7 @@ $("#guardar").click(function (e) {
     if (validacionCampos.form()) {
         guardar();
     }
-    
+
 });
 
 document.querySelector("tbody").addEventListener("click", (e) => {
@@ -261,6 +261,9 @@ function cargarCampos(inmueble) {
         url: `http://localhost:8080/inmueble/${inmueble}`,
         dataType: "JSON",
         success: function (response) {
+
+            cargarImagenes(response);
+
             //  Obtengo un arreglo de todos los input a llenar por medio de su propiedad name
             let campos = $('*[name]');
 
@@ -279,6 +282,12 @@ function cargarCampos(inmueble) {
             console.log("Terminado");
         }
     });
+}
+
+function cargarImagenes(datos){
+    $("#foto1").attr("src", `img/fotos-propiedades/${datos.id}-img1.jpg`);
+    $("#foto2").attr("src", `img/fotos-propiedades/${datos.id}-img2.jpg`);
+    $("#foto3").attr("src", `img/fotos-propiedades/${datos.id}-img3.jpg`);
 }
 
 function cargarTabla() {
@@ -368,9 +377,29 @@ function guardar() {
     edicion();
     const accion = (OPC == -1) ? "inmueble" : "modificar-inmueble";
     const peticion = (OPC == -1) ? "POST" : "PUT";
+
+    // Crear un objeto de formulario
+    let formData = new FormData();
+
+    //recorrer inputs tipo file
+    let inputs = $('#imagenes input[type=file]');
+    
+    for (var i = 1; i <= inputs.length; i++) {
+       //Traer el archivo
+       let foto = $(`#imagen${i}`)[0].files[0];
+        console.log(`FOTO: ${foto}`);
+       //Añadir la imagen como objeto form-data
+       formData.append(`imagen${i}`, foto);
+    }
+        
+   
+
     $.ajax({
         type: peticion,
         url: `http://localhost:8080/${accion}?${datos}`,
+        data: formData,
+        processData: false,
+        contentType: false,
         success: function (response) {
             if (OPC == -1) {
                 Swal.fire({
