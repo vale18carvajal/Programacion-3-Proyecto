@@ -6,7 +6,7 @@ $("#nueva-cuenta").click(function (e) {
 
 
 $("#ingresar").click(function (e) {
-  
+
     const username = $(".formulario-inicio #nombre_usuario").val().trim();
     const pass = $(".formulario-inicio #clave").val().trim();
 
@@ -27,7 +27,7 @@ $("#ingresar").click(function (e) {
                         icon: "error"
                     });
                 }
-    
+
             },
             error: function (er) {
                 console.log(err.statusText + er.responseText);
@@ -157,9 +157,19 @@ $("#crear-cuenta").click(function (e) {
 });
 
 function guardarUsuario(datos, accion, peticion) {
+
+    let foto = $('#foto_perfil')[0].files[0];
+    // Crear un objeto de formulario
+    let formData = new FormData();
+    //Añadir la imagen como objeto form-data
+    formData.append('imagen', foto);
+
     $.ajax({
         type: peticion,
         url: `http://localhost:8080/${accion}?${datos}`,
+        data: formData,
+            processData: false,
+            contentType: false,
         success: function (response) {
             // console.log(response);
         },
