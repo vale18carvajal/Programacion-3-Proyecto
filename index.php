@@ -88,21 +88,21 @@
         <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
       </div>
       <div class="carousel-inner">
-        <div class="carousel-item active">
+        <div id="1" class="carousel-item active">
           <img src="https://www.tecnimuebles.com/wp-content/uploads/2022/12/PROPLAC-Tips-para-Lograr-una-Fachada-Elegante-en-Casa-1024x683-1.jpg" class="d-block w-100" alt="...">
           <div class="carousel-caption d-none d-md-block">
             <h5 id="etiqueta1">Nombre del inmueble</h5>
             <a href="">Ver detalles</a>
           </div>
         </div>
-        <div class="carousel-item">
+        <div id="2" class="carousel-item">
           <img src="https://hips.hearstapps.com/hmg-prod/images/casa-elegante-en-memphis-1610965354.jpg" class="d-block w-100" alt="...">
           <div class="carousel-caption d-none d-md-block">
             <h5 id="etiqueta2">Nombre del inmueble</h5>
             <a href="">Ver detalles</a>
           </div>
         </div>
-        <div class="carousel-item">
+        <div id="3" class="carousel-item">
           <img src="https://hips.hearstapps.com/hmg-prod/images/casa-reformada-decorada-elegante-colores-neutros-tonos-pastel-salon-cocina-abierta-molduras-1669197336.jpg" class="d-block w-100" alt="...">
           <div class="carousel-caption d-none d-md-block">
             <h5 id="etiqueta3">Nombre del inmueble</h5>

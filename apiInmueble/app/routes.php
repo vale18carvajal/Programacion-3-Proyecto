@@ -266,7 +266,7 @@ return function (App $app) {
 
         //obtener el ultima cedula insertada
         $idInsertado = $db->insert_Id('inmueble', 'id');
-        
+
         //mover el archivo a la carpeta deseada
         $nomArchivo = "../../img/fotos-propiedades/$idInsertado-img1.jpg";
         //mover el archivos
@@ -426,6 +426,27 @@ return function (App $app) {
         WHERE estado_fk = '1'
         ORDER BY id DESC
         LIMIT 10";
+
+        //Ejecutar la consulta en modo fetch
+        $res = $db->GetAll($sql);
+
+        $response->getBody()->write(json_encode($res));
+        return $response;
+    });
+
+    $app->get('/inmuebles-aleatorios', function (Request $request, Response $response) {
+        //Realizar conexion
+        $db = conectar();
+
+        //Cambiar a modo fetch
+        $db->SetFetchMode(ADODB_FETCH_ASSOC);
+
+        //Consula sql
+        $sql = "SELECT id, nombre_inmueble
+        FROM inmueble 
+        WHERE estado_fk = '1'
+        ORDER BY RAND()
+        LIMIT 3;";
 
         //Ejecutar la consulta en modo fetch
         $res = $db->GetAll($sql);
