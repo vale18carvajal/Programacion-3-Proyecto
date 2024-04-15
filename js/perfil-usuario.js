@@ -14,6 +14,12 @@ $("#confirmar").click(function (e) {
     guardar();
 });
 
+$("#cerrar").click(function (e) { 
+    //e.preventDefault();
+    sessionStorage.clear();
+    location.href = "index.php"
+});
+
 function modoEdicion() {
     //Abrir campos para editar datos
     $("input").attr("disabled", false);

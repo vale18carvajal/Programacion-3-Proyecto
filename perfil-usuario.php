@@ -15,7 +15,7 @@
                     <li>
                         <hr class="dropdown-divider">
                     </li>
-                    <li><a class="dropdown-item" href="#">Cerrar Sesión</a></li>
+                    <li><a id="cerrar" class="dropdown-item" href="#">Cerrar Sesión</a></li>
                 </ul>
             </div>
         </div>
