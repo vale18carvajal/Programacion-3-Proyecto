@@ -38,12 +38,12 @@ $url = basename($_SERVER["PHP_SELF"], ".php");
             <li class="nav-item">
               <a class="nav-link" href="contactenos.php">Contáctenos</a>
             </li>
-            <li class="nav-item">
+            <li id="perfilUsuario" class="nav-item">
               <a class="nav-link" href="inicio-sesion.php">Inicio de Sesión</a>
             </li>
           </ul>
           <div class="d-flex align-items-center icono">
-            <a class="nav-link" href="perfil-usuario.php"><img src="img/iconoUsuario.png" alt="Icono usuario">Mi perfil</a> 
+            <a hidden class="nav-link" href="perfil-usuario.php"><img src="img/iconoUsuario.png" alt="Icono usuario">Mi perfil</a> 
           </div>
         </div>
       </div>
