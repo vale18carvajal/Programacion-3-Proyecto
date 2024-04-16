@@ -9,9 +9,9 @@
                     Opciones
                 </a>
                 <ul class="dropdown-menu">
-                    <li id="CRUD-propiedades" hidden><a class="dropdown-item" href="CRUD-propiedades.php">Propiedades</a></li>
+                    <li id="CRUD-propiedades"><a class="dropdown-item" href="CRUD-propiedades.php">Administrar propiedades</a></li>
                     <li id="reportes" hidden><a class="dropdown-item" href="reportes.php">Generar reporte</a></li>
-                    <li id="CRUD-usuarios" hidden><a class="dropdown-item" href="CRUD-usuarios.php">Control de usuarios</a></li>
+                    <li id="CRUD-usuarios" hidden><a class="dropdown-item" href="CRUD-usuarios.php">Administar usuarios</a></li>
                     <li>
                         <hr class="dropdown-divider">
                     </li>
