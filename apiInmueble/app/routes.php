@@ -334,7 +334,7 @@ return function (App $app) {
     });
 
     //Obtener los inmuebles de un usuario
-    $app->get('/inmuebles-usuario/{usuario}', function (Request $request, Response $response,array $args) {
+    $app->get('/inmuebles-usuario/{usuario}', function (Request $request, Response $response, array $args) {
         $usuario = $args["usuario"];
         //Realizar conexion
         $db = conectar();
@@ -499,16 +499,68 @@ return function (App $app) {
         JOIN estado e ON e.codigo_estado = i.estado_fk
         WHERE 1";
 
-        if ($disponible == !'0') {
+        if ($disponible !== "0") {
             $sql .= " AND estado_fk = '$disponible'";
         }
 
-        if ($provincia == !'0') {
+        if ($provincia !== "0") {
             $sql .= " AND provincia_fk = '$provincia'";
         }
 
-        if ($tipo == !'0') {
+        if ($tipo !== "0") {
             $sql .= " AND tipo_inmueble_fk = '$tipo'";
+        }
+
+        //Ejecutar la consulta en modo fetch
+        $res = $db->GetAll($sql);
+
+        $response->getBody()->write(json_encode($res));
+        return $response;
+    });
+    //Busar inmuebles por filtros
+    $app->get('/inmueble-dis/{tipo}/{precio}/{ubi}', function (Request $request, Response $response, array $args) {
+        //Parámentros
+        $tipo = $args["tipo"];
+        $precio = $args["precio"];
+        $ubi = $args["ubi"];
+
+        //Realizar conexion
+        $db = conectar();
+
+        //Cambiar a modo fetch
+        $db->SetFetchMode(ADODB_FETCH_ASSOC);
+
+        //Rango de precios
+        switch ($precio) {
+            case 1:
+                $precioMin = 70000;
+                $precioMax = 195000;
+                break;
+            case 2:
+                $precioMin = 195000;
+                $precioMax = 395000;
+                break;
+            case 3:
+                $precioMin = 395000;
+                $precioMax = 99999999999999;
+                break;
+        };
+
+        //Consula sql
+        $sql = "SELECT id, nombre_inmueble, direccion_exacta
+      FROM inmueble 
+      WHERE estado_fk = 1";
+
+        if ($tipo != 0) {
+            $sql .= " AND tipo_inmueble_fk = '$tipo'";
+        }
+
+        if ($precio != 0) {
+            $sql .= " AND (precio >= $precioMin AND precio < $precioMax)";
+        }
+
+        if ($ubi != 0) {
+            $sql .= " AND provincia_fk = '$ubi'";
         }
 
         //Ejecutar la consulta en modo fetch
