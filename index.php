@@ -22,17 +22,17 @@
     <div class="row opciones">
       <div class="col-md-6 col-lg-6">
         <label for="tipo"><strong>Tipo de inmueble</strong></label>
-        <select class="form-select" aria-label="Tipo de propiedad">
-          <option selected>Seleccionar</option>
-          <option value="casa">Casa</option>
-          <option value="apartamento">Apartamento</option>
-          <option value="terreno">Terreno</option>
+        <select id="tipo" class="form-select" aria-label="Tipo de propiedad">
+          <option value="0" selected>Seleccionar</option>
+          <option value="1">Casa</option>
+          <option value="2">Apartamento</option>
+          <option value="3">Terreno</option>
         </select>
       </div>
       <div class="col-md-6 col-lg-6">
         <label for="rango"><strong>Rango de precio</strong></label>
-        <select class="form-select col-md-6 col-lg-6" aria-label="Rango de precios">
-          <option selected>Seleccionar</option>
+        <select id="rango" class="form-select col-md-6 col-lg-6" aria-label="Rango de precios">
+          <option value="0" selected>Seleccionar</option>
           <option value="1">USD $70 000 a USD $195 000</option>
           <option value="2">USD $195 000 a  USD $395 000</option>
           <option value="3">Más de USD $395 000</option>
@@ -40,28 +40,28 @@
       </div>
       <div class="col-md-6 col-lg-6">
         <label for="provincia"><strong>Provincia</strong></label>
-        <select class="form-select col-md-6 col-lg-6" aria-label="Provincia">
-          <option selected>Seleccionar</option>
-          <option value="san jose">San José</option>
-          <option value="cartago">Cartago</option>
-          <option value="alajuela">Alajuela</option>
-          <option value="heredia">Heredia</option>
-          <option value="guanacaste">Guanacaste</option>
-          <option value="puntarenas">Puntarenas</option>
-          <option value="limon">Limón</option>
+        <select id="provincia" class="form-select col-md-6 col-lg-6" aria-label="Provincia">
+          <option value="0" selected>Seleccionar</option>
+          <option value="1">San José</option>
+          <option value="2">Cartago</option>
+          <option value="3">Alajuela</option>
+          <option value="4">Heredia</option>
+          <option value="5">Guanacaste</option>
+          <option value="6">Puntarenas</option>
+          <option value="7">Limón</option>
         </select>
       </div>
       <div class="col-md-6 col-lg-6">
         <label for="habitaciones"><strong>Cantidad de habitaciones</strong></label>
-        <select class="form-select col-md-6 col-lg-6" aria-label="Tipo de propiedad">
-          <option selected>Seleccionar</option>
+        <select id="habitaciones" class="form-select col-md-6 col-lg-6" aria-label="Tipo de propiedad">
+          <option value="0" selected>Seleccionar</option>
           <option value="1">1</option>
           <option value="2">2-3</option>
           <option value="3">4 o más</option>
         </select>
       </div>
       <div class="mt-2">
-        <button class="btn btn-azul">Buscar</button>
+        <button id="buscar" class="btn btn-azul">Buscar</button>
       </div>
     </div>
   </div>
