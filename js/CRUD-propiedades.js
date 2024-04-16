@@ -14,27 +14,52 @@ document.querySelector("tbody").addEventListener("click", (e) => {
 });
 
 function cargarTabla() {
+    //Validamos el tipo de usuario
+    if (sessionStorage.getItem("rol") == 1) {
+        //Para usuario administrador
+        $.ajax({
+            type: "GET",
+            url: "http://localhost:8080/inmuebles",
+            dataType: "JSON",
+            success: function (response) {
+                // console.log(response);
+                let filas = "";
+                response.forEach(dato => {
+                    filas += crearFilas(dato)
+                });
 
-    $.ajax({
-        type: "GET",
-        url: "http://localhost:8080/inmuebles",
-        dataType: "JSON",
-        success: function (response) {
-            // console.log(response);
-            let filas = "";
-            response.forEach(dato => {
-                filas += crearFilas(dato)
-            });
+                $("tbody").html(filas);
+            },
+            error: function (er) {
+                console.log(err.statusText + er.responseText);
+            },
+            complete: function () {
+                console.log("Terminado");
+            }
+        });
+    } else {
+        //Para usuario visitante
+        $.ajax({
+            type: "GET",
+            url: `http://localhost:8080/inmuebles-usuario/${sessionStorage.getItem("activo")}`,
+            dataType: "JSON",
+            success: function (response) {
+                // console.log(response);
+                let filas = "";
+                response.forEach(dato => {
+                    filas += crearFilas(dato)
+                });
 
-            $("tbody").html(filas);
-        },
-        error: function (er) {
-            console.log(err.statusText + er.responseText);
-        },
-        complete: function () {
-            console.log("Terminado");
-        }
-    });
+                $("tbody").html(filas);
+            },
+            error: function (er) {
+                console.log(err.statusText + er.responseText);
+            },
+            complete: function () {
+                console.log("Terminado");
+            }
+        });
+    }
 }
 
 function crearFilas(dato) {

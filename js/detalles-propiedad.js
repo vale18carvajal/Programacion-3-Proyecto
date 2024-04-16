@@ -1,5 +1,6 @@
 deshabilitar();
 edicion();
+
 let OPC = -1;
 let inmueble = "";
 if (sessionStorage.getItem("idInmueble") != 'null') {
@@ -373,7 +374,8 @@ function nuevoVendedor() {
 function guardar() {
     //Habilitamos el campo cedula para añadirlo a la variable datos
     habilitar();
-    const datos = $("*[name]").serialize();
+    let datos = $("*[name]").serialize();
+    datos += `&autor=${sessionStorage.getItem("activo")}`;
     edicion();
     const accion = (OPC == -1) ? "inmueble" : "modificar-inmueble";
     const peticion = (OPC == -1) ? "POST" : "PUT";
