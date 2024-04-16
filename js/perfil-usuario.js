@@ -68,11 +68,16 @@ function cargarCampos(username) {
             //Colocar nombre de usuario en el encabezado del form
             $("#nombreUsuario").html(response.nombre_usuario)
 
+
             //Validacion de tipo de usuario para mostrar opciones
             if (response.rol_fk == 1) {
-                $("#CRUD-propiedades").attr("hidden", false);
                 $("#reportes").attr("hidden", false);
                 $("#CRUD-usuarios").attr("hidden", false);
+                //Guardamos el tipo de usuario
+                sessionStorage.setItem("rol", 1);
+            } else {
+                //Guardamos el tipo de usuario
+                sessionStorage.setItem("rol", 2);
             }
 
         },
