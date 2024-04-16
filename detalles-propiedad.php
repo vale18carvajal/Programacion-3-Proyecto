@@ -7,19 +7,19 @@
         <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
             <div class="carousel-inner">
                 <div class="carousel-item active">
-                    <img id="foto1" src="img/casa1.png" class="d-block w-100" alt="Foto de la propiedad">
+                    <img id="foto1" src="img/Vista_Previa.png" class="d-block w-100" alt="Foto de la propiedad">
                     <div class="carousel-caption d-none d-md-block">
                         <p>Vista previa</p>
                     </div>
                 </div>
                 <div class="carousel-item">
-                    <img id="foto2" src="img/casa2.png" class="d-block w-100" alt="Foto de la propiedad">
+                    <img id="foto2" src="img/Vista_Previa.png" class="d-block w-100" alt="Foto de la propiedad">
                     <div class="carousel-caption d-none d-md-block">
                         <p>Vista previa</p>
                     </div>
                 </div>
                 <div class="carousel-item">
-                    <img id="foto3" src="img/casa3.png" class="d-block w-100" alt="Foto de la propiedad">
+                    <img id="foto3" src="img/Vista_Previa.png" class="d-block w-100" alt="Foto de la propiedad">
                     <div class="carousel-caption d-none d-md-block">
                         <p>Vista previa</p>
                     </div>
