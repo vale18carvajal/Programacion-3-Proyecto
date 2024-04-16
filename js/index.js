@@ -1,6 +1,20 @@
 cargarCartas();
 cargarCarrucel();
 
+$("#buscar").click(function (e) { 
+    //e.preventDefault();
+    var filtrosBusqueda = {
+        tipo: $("#tipo").val(),
+        rango: $("#rango").val(),
+        provincia: $("#provincia").val(),
+        habitaciones: $("#habitaciones").val()
+    };
+    
+    //Almacenamos los datos para la búsqueda
+    sessionStorage.setItem("busqueda", JSON.stringify(filtrosBusqueda));
+    location.href = "inmuebles.php";
+});
+
 $(".propiedades").on("click", ".detalles", function (e) {
     // e.preventDefault();
     // Obtener el elemento padre del botón, que es la carta (div con clase "card")
