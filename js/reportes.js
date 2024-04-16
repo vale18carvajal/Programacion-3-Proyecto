@@ -51,3 +51,28 @@ function crearFilas(dato) {
             <td>${dato.codigo_vendedor}</td>
         </tr>`;
 }
+
+$("#btn-pdf").click(function (e) {
+    // e.preventDefault();
+    let fechaHora = new Date();
+
+    // Obtener la fecha actual
+    let fechaActual = fechaHora.toISOString().slice(0, 10);
+
+    // Obtener la hora actual
+    let horaActual = fechaHora.toLocaleTimeString();
+
+    // Obtener la fecha y hora actual en un formato personalizado
+    let tiempo = `${fechaActual}-${horaActual}`;
+
+    let vista = {
+        margin: [20, 10, 20, 10], // Márgenes: arriba, derecha, abajo, izquierda
+        filename: `reporte-${tiempo}.pdf`, // Nombre del archivo PDF
+    };
+    
+    //Espera de rendirazión de los elementos dinámicos
+    setTimeout(function () {
+        let reporte = document.getElementById("reporte");
+        html2pdf(reporte, vista);
+    }, 1000);
+});

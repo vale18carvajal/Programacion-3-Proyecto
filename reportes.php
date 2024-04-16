@@ -55,7 +55,7 @@
 
         <!-- tabla de reportes -->
 
-        <table class="table table-striped text-center" hidden>
+        <table id="reporte" class="table table-striped text-center" hidden>
             <thead>
                 <tr>
                     <th scope="col">ID</th>

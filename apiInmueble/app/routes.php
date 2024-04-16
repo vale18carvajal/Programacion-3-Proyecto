@@ -313,7 +313,7 @@ return function (App $app) {
         $response->getBody()->write(json_encode($res));
         return $response;
     });
-    //Busar inmuebles
+    //Obtener todos los inmuebles / usuario admin
     $app->get('/inmuebles', function (Request $request, Response $response) {
         //Realizar conexion
         $db = conectar();
@@ -325,6 +325,28 @@ return function (App $app) {
         $sql = "SELECT i.id, i.nombre_inmueble, e.descripcion_estado, i.codigo_vendedor 
         FROM inmueble i
         JOIN estado e ON e.codigo_estado = i.estado_fk";
+
+        //Ejecutar la consulta en modo fetch
+        $res = $db->GetAll($sql);
+
+        $response->getBody()->write(json_encode($res));
+        return $response;
+    });
+
+    //Obtener los inmuebles de un usuario
+    $app->get('/inmuebles-usuario/{usuario}', function (Request $request, Response $response,array $args) {
+        $usuario = $args["usuario"];
+        //Realizar conexion
+        $db = conectar();
+
+        //Cambiar a modo fetch
+        $db->SetFetchMode(ADODB_FETCH_ASSOC);
+
+        //Consula sql
+        $sql = "SELECT i.id, i.nombre_inmueble, e.descripcion_estado, i.codigo_vendedor 
+        FROM inmueble i
+        JOIN estado e ON e.codigo_estado = i.estado_fk
+        WHERE autor = '$usuario'";
 
         //Ejecutar la consulta en modo fetch
         $res = $db->GetAll($sql);
