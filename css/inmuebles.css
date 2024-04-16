@@ -116,7 +116,7 @@ select{
     width: 200px;  
     height: 50px;
     margin: 100px;  
-    background-color: var(--Azul-oscuro-1);
+    /* background-color: var(--Azul-oscuro-1);
     color: var(--texto-color-claro);
-    border-color: var(--Azul-oscuro-1);
+    border-color: var(--Azul-oscuro-1); */
 }
