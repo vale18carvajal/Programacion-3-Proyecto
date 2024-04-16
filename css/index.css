@@ -155,3 +155,10 @@ h3{
     height: 700px;
     object-fit: cover;
 }
+.card:hover {
+    transform: scale(1.05);
+    -webkit-transform: scale(1.05);
+    -moz-transform: scale(1.05);
+    -ms-transform: scale(1.05);
+    -o-transform: scale(1.05);
+}
