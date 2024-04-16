@@ -56,7 +56,7 @@ function keepFilterValue($param_name, $value){
                     </select>
                 </div>
                 <div class="position-absolute top-50 end-0 translate-middle-y mb-3 me-3">
-                    <button class="btn btnfiltro">Filtrar</button>
+                    <button class="btn btn-azul btnfiltro">Filtrar</button>
                 </div>
             </form>
         </div>
